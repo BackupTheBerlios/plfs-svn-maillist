@@ -1,0 +1,370 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Plfs-svn] doc 03.tex,1.4,1.5 04.tex,1.3,1.4
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/plfs-svn/2005-June/index.html" >
+   <LINK REL="made" HREF="mailto:plfs-svn%40lists.berlios.de?Subject=Re%3A%20%5BPlfs-svn%5D%20doc%2003.tex%2C1.4%2C1.5%2004.tex%2C1.3%2C1.4&In-Reply-To=%3C200506122208.j5CM8F124786%40bat.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000007.html">
+   <LINK REL="Next"  HREF="000009.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Plfs-svn] doc 03.tex,1.4,1.5 04.tex,1.3,1.4</H1>
+    <B>xscript</B> 
+    <A HREF="mailto:plfs-svn%40lists.berlios.de?Subject=Re%3A%20%5BPlfs-svn%5D%20doc%2003.tex%2C1.4%2C1.5%2004.tex%2C1.3%2C1.4&In-Reply-To=%3C200506122208.j5CM8F124786%40bat.berlios.de%3E"
+       TITLE="[Plfs-svn] doc 03.tex,1.4,1.5 04.tex,1.3,1.4">nobody at sheep.berlios.de
+       </A><BR>
+    <I>Mon Jun 13 00:08:15 CEST 2005</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000007.html">[Plfs-svn] doc 02.tex,1.6,1.7
+</A></li>
+        <LI>Next message: <A HREF="000009.html">[Plfs-svn] doc 02.tex,1.7,1.8 05.tex,1.3,1.4 03.tex,1.5,1.6 04.tex,1.4,1.5
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#8">[ date ]</a>
+              <a href="thread.html#8">[ thread ]</a>
+              <a href="subject.html#8">[ subject ]</a>
+              <a href="author.html#8">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Update of /cvsroot/plfs/doc
+In directory sheep:/tmp/cvs-serv3727
+
+Modified Files:
+	03.tex 04.tex 
+Log Message:
+Pasado el corrector ortografico
+
+Index: 03.tex
+===================================================================
+RCS file: /cvsroot/plfs/doc/03.tex,v
+retrieving revision 1.4
+retrieving revision 1.5
+diff -C2 -d -r1.4 -r1.5
+*** 03.tex	12 Jun 2005 20:13:22 -0000	1.4
+--- 03.tex	12 Jun 2005 22:08:13 -0000	1.5
+***************
+*** 34,38 ****
+  Las operaciones que \dpld ofrece son las siguientes:
+  
+! % TODO: faltan las credenciales de autentificacion, o mejor un paso previo de
+  % autentificaci&#243;n?!?!?!?!
+  % TODO(~): faltan los parametros de que desplegar, etc
+--- 34,38 ----
+  Las operaciones que \dpld ofrece son las siguientes:
+  
+! % TODO: faltan las credenciales de autentificaci&#243;n, o mejor un paso previo de
+  % autentificaci&#243;n?!?!?!?!
+  % TODO(~): faltan los parametros de que desplegar, etc
+***************
+*** 70,74 ****
+  		producen en un slice de un nodo concreto.
+  		% TODO(?): se puede utilizar un grupo de oyentes a cambios en
+! 		% grupos de dplc, asi no hace falta el registro...
+  
+  	\item[\texttt{invalidateObj (slice\_name, name)}] :\\
+--- 70,74 ----
+  		producen en un slice de un nodo concreto.
+  		% TODO(?): se puede utilizar un grupo de oyentes a cambios en
+! 		% grupos de dplc, as&#237; no hace falta el registro...
+  
+  	\item[\texttt{invalidateObj (slice\_name, name)}] :\\
+***************
+*** 79,83 ****
+  		%NOTA: de que puede servir invalidar un objeto del FS?
+  
+! 	% TODO(?): validaciones? temporalidad?     ES UTIL PLANTEARSELO?
+  	
+  	% TODO: quien lo utiliza?
+--- 79,83 ----
+  		%NOTA: de que puede servir invalidar un objeto del FS?
+  
+! 	% TODO(?): validaciones? temporalidad?     ES &#218;TIL PLANTE&#193;RSELO?
+  	
+  	% TODO: quien lo utiliza?
+***************
+*** 174,178 ****
+  
+  % TODO(~): seguridad a la hora de hacer cambios? umcc va en la m&#225;quina de
+! % administracion (se puede modificar lo que se quiera)      .... I????
+  %TODO(?): ``dns''?  ------- PQ EL GRUPID NO POT SER SLICE_NAME?
+  %			    TB SERVIRIA SI VOLEM ENVIAR A SLICE
+--- 174,178 ----
+  
+  % TODO(~): seguridad a la hora de hacer cambios? umcc va en la m&#225;quina de
+! % administraci&#243;n (se puede modificar lo que se quiera)      .... I????
+  %TODO(?): ``dns''?  ------- PQ EL GRUPID NO POT SER SLICE_NAME?
+  %			    TB SERVIRIA SI VOLEM ENVIAR A SLICE
+***************
+*** 212,220 ****
+  % TODO(~): estudiarlo!!!
+  % El punto que a&#250;n no hemos aclarado es si el propio identificador de grupo
+! % multicast ser&#225; el identificador de slice (VOTO POR ELLO!!!!!!!!!!!) o algun
+  % otro de m&#225;s gen&#233;rico (que requerir&#237;a una nueva capa de administraci&#243;n de
+  % grupos multicast).
+  %
+! % Depende del software de multicast que se utilize! (araneola)
+  
+  
+--- 212,220 ----
+  % TODO(~): estudiarlo!!!
+  % El punto que a&#250;n no hemos aclarado es si el propio identificador de grupo
+! % multicast ser&#225; el identificador de slice (VOTO POR ELLO!!!!!!!!!!!) o alg&#250;n
+  % otro de m&#225;s gen&#233;rico (que requerir&#237;a una nueva capa de administraci&#243;n de
+  % grupos multicast).
+  %
+! % Depende del software de multicast que se utilice! (araneola)
+  
+  
+***************
+*** 222,231 ****
+  \section{\umcr}
+  
+! Estos nodos se encargan de hacer la transimisi&#243;n multicast, con tal de hacer
+  llegar los datos a los \umcc del grupo de destino.
+! Asumiremos que estos nodos pertencen a un slice administrativo en el cual no se
+  realizan modificaciones o configuraciones maliciosas.
+  
+! C&#243;mo todos los accesos a la red multicast se hacen a traves de \umcc, se puede
+  f&#225;cilmente utilizar una implementaci&#243;n ya existente de una red overlay
+  multicast en modo usuario, como es Araneola \cite{Araneola}.
+--- 222,231 ----
+  \section{\umcr}
+  
+! Estos nodos se encargan de hacer la transmisi&#243;n multicast, con tal de hacer
+  llegar los datos a los \umcc del grupo de destino.
+! Asumiremos que estos nodos pertenecen a un slice administrativo en el cual no se
+  realizan modificaciones o configuraciones maliciosas.
+  
+! C&#243;mo todos los accesos a la red multicast se hacen a trav&#233;s de \umcc, se puede
+  f&#225;cilmente utilizar una implementaci&#243;n ya existente de una red overlay
+  multicast en modo usuario, como es Araneola \cite{Araneola}.
+***************
+*** 238,242 ****
+  \section{\dplc}
+  
+! % TODO: pertenece a un slice administrado correctamente (no habra
+  % modificaciones ni configuraciones maliciosas)
+  
+--- 238,242 ----
+  \section{\dplc}
+  
+! % TODO: pertenece a un slice administrado correctamente (no habr&#225;
+  % modificaciones ni configuraciones maliciosas)
+  
+***************
+*** 255,259 ****
+  
+  \begin{description}
+! 	\item Realizar una preautentificaci&#243;n, en la que dplc se autentifica con los
+  		slices a los que se llevar&#225; acabo el deployment de aplicaciones, de modo que en
+  		las comunicaciones no haga falta realizar el env&#237;o de clave y password y tampoco
+--- 255,260 ----
+  
+  \begin{description}
+! 	\item Realizar una pre-autentificaci&#243;n, en la que dplc se autentifica
+! con los
+  		slices a los que se llevar&#225; acabo el deployment de aplicaciones, de modo que en
+  		las comunicaciones no haga falta realizar el env&#237;o de clave y password y tampoco
+***************
+*** 271,275 ****
+  % TODO(?): seguridad?
+  \begin{description}
+! 	% TODO: que es _la informacion_?
+  	\item[\texttt{getInfoNodeSlice(slice\_name)}] :\\
+  		Obtiene la informaci&#243;n de los ficheros tipo \textit{unshared}
+--- 272,276 ----
+  % TODO(?): seguridad?
+  \begin{description}
+! 	% TODO: que es _la informaci&#243;n_?
+  	\item[\texttt{getInfoNodeSlice(slice\_name)}] :\\
+  		Obtiene la informaci&#243;n de los ficheros tipo \textit{unshared}
+***************
+*** 277,285 ****
+  		el mismo nodo que el propio \dplc.
+  
+! 	% TODO: ELIMINAR: llama a la operacion, no la ofrece
+  	\item[\texttt{warnDpldNewNodeInSlice (slice\_name, node\_name)}] :\\
+  		Avisa a los \dpld encargados del slice \textit{slice\_name} de
+  		que se ha agregado un nuevo nodo \textit{node\_name} a dicho a
+! 		slice y que por lo tanto se le deber&#237;a realziar el despliegue de
+  		la aplicaci&#243;n.
+  
+--- 278,286 ----
+  		el mismo nodo que el propio \dplc.
+  
+! 	% TODO: ELIMINAR: llama a la operaci&#243;n, no la ofrece
+  	\item[\texttt{warnDpldNewNodeInSlice (slice\_name, node\_name)}] :\\
+  		Avisa a los \dpld encargados del slice \textit{slice\_name} de
+  		que se ha agregado un nuevo nodo \textit{node\_name} a dicho a
+! 		slice y que por lo tanto se le deber&#237;a realizar el despliegue de
+  		la aplicaci&#243;n.
+  
+***************
+*** 293,297 ****
+  		aplicaciones.
+  
+! 	% TODO: para que? se para sola... hace falta ofrecer la opcion de pararla?
+  	\item[\texttt{stopAppInSlice (slice\_name)}] :
+  		El \dplc del nodo ejecutar&#225; script-&gt;stop en el slice
+--- 294,299 ----
+  		aplicaciones.
+  
+! 	% TODO: para que? se para sola... hace falta ofrecer la opci&#243;n de
+! 	% pararla?
+  	\item[\texttt{stopAppInSlice (slice\_name)}] :
+  		El \dplc del nodo ejecutar&#225; script-&gt;stop en el slice
+***************
+*** 326,330 ****
+  % Como diferenciar al entrar un nodo en un grupo de si ya esta al dia o no?
+  % - no se hace nada (solo hay cambios si esta presente en un deploy expreso)
+! % - tiene la ultima version de los ficheros (numeracion + indicador de ultima version (*))
+  % - los tiene igual que la mayoria (checksums + problema bizantino)
+  % - los tiene igual que un repositorio (checksums + repositorio - bamboo? -)
+--- 328,333 ----
+  % Como diferenciar al entrar un nodo en un grupo de si ya esta al dia o no?
+  % - no se hace nada (solo hay cambios si esta presente en un deploy expreso)
+! % - tiene la ultima version de los ficheros (numeraci&#243;n + indicador de ultima
+! %   version (*))
+  % - los tiene igual que la mayoria (checksums + problema bizantino)
+  % - los tiene igual que un repositorio (checksums + repositorio - bamboo? -)
+
+Index: 04.tex
+===================================================================
+RCS file: /cvsroot/plfs/doc/04.tex,v
+retrieving revision 1.3
+retrieving revision 1.4
+diff -C2 -d -r1.3 -r1.4
+*** 04.tex	12 Jun 2005 20:13:22 -0000	1.3
+--- 04.tex	12 Jun 2005 22:08:13 -0000	1.4
+***************
+*** 35,42 ****
+  \subsection{Tipos de mensajes}
+  
+! % TODO: hace falta esta explicacion? ya esta hecha antes...
+! Cuando se realice una operaci&#243;n (&quot;ls&quot;,&quot;mv&quot;, etc) en el sistema de ficheros
+! \plfs, el m&#243;dulo de kernel \kplfs que implementa estas operaciones, deber&#225;
+! informar dichos eventos al m&#243;dulo a nivel usuario \uplfs (el cual deber&#225;
+  realizar las operaciones pertinentes).
+  Para ello, hemos pensado que el m&#243;dulo \kplfs realizar&#237;a la comunicaci&#243;n de
+--- 35,42 ----
+  \subsection{Tipos de mensajes}
+  
+! % TODO: hace falta esta explicaci&#243;n? ya esta hecha antes...
+! Cuando se realice una operaci&#243;n (\textt{ls},\texttt{mv}, etc) en el sistema de
+! ficheros \plfs, el m&#243;dulo de kernel \kplfs que implementa estas operaciones,
+! deber&#225; informar dichos eventos al m&#243;dulo a nivel usuario \uplfs (el cual deber&#225;
+  realizar las operaciones pertinentes).
+  Para ello, hemos pensado que el m&#243;dulo \kplfs realizar&#237;a la comunicaci&#243;n de
+***************
+*** 45,49 ****
+  
+  % TODO: aclararlo con las operaciones de 02.tex/03.tex
+! 	Campo1: Operacion (&quot;ls&quot;, &quot;mv&quot;, ...)
+  	Campo2: Parametros (fichero, directorio...)
+  
+--- 45,49 ----
+  
+  % TODO: aclararlo con las operaciones de 02.tex/03.tex
+! 	Campo1: Operaci&#243;n (&quot;ls&quot;, &quot;mv&quot;, ...)
+  	Campo2: Parametros (fichero, directorio...)
+  
+***************
+*** 52,56 ****
+  \section{\uplfs $\rightarrow$ \pldb}
+  %TODO: REVISAR :PPPP
+! Cuando el usuario quierer mirar el contenido del directorio de slices o de
+  nodos de un slice, y \kplfs remite dicha operaci&#243;n a \uplfs, este realiza la
+  consulta de dicha informaci&#243;n llamando a las operaciones que ofrece \pldb, por
+--- 52,56 ----
+  \section{\uplfs $\rightarrow$ \pldb}
+  %TODO: REVISAR :PPPP
+! Cuando el usuario quiere mirar el contenido del directorio de slices o de
+  nodos de un slice, y \kplfs remite dicha operaci&#243;n a \uplfs, este realiza la
+  consulta de dicha informaci&#243;n llamando a las operaciones que ofrece \pldb, por
+***************
+*** 64,68 ****
+  \section{\uplfs $\rightarrow$ \dpld}
+  
+! % TODO: forma de comunicacion
+  % TODO: formato de los mensajes
+  
+--- 64,68 ----
+  \section{\uplfs $\rightarrow$ \dpld}
+  
+! % TODO: forma de comunicaci&#243;n
+  % TODO: formato de los mensajes
+  
+***************
+*** 71,75 ****
+  \section{\dpld $\rightarrow$ \pldb}
+  
+! %TODO(~) Analogamente a \uplfs -&gt; \pldb
+  
+  
+--- 71,75 ----
+  \section{\dpld $\rightarrow$ \pldb}
+  
+! %TODO(~) An&#225;logamente a \uplfs -&gt; \pldb
+  
+  
+***************
+*** 137,141 ****
+  	\centering
+  	\includegraphics[scale=0.5]{paq_-_uplfs-pldb.eps}
+! 	\caption{Paquete generico \uplfs $\rightarrow$ \dplc}
+  	\label{fig:paq_-_uplfs-pldb}
+  \end{figure}
+--- 137,141 ----
+  	\centering
+  	\includegraphics[scale=0.5]{paq_-_uplfs-pldb.eps}
+! 	\caption{Paquete gen&#233;rico \uplfs $\rightarrow$ \dplc}
+  	\label{fig:paq_-_uplfs-pldb}
+  \end{figure}
+***************
+*** 161,165 ****
+  		paquete
+  
+! 	\item[Clave/Passwordd privados ssh:] clave y password privados de ssh para
+  		que	\dplc se comunique con el slice destino
+  
+--- 161,166 ----
+  		paquete
+  
+! 	\item[Clave/Password privados ssh:] clave y password privados de ssh
+! para
+  		que	\dplc se comunique con el slice destino
+  
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000007.html">[Plfs-svn] doc 02.tex,1.6,1.7
+</A></li>
+	<LI>Next message: <A HREF="000009.html">[Plfs-svn] doc 02.tex,1.7,1.8 05.tex,1.3,1.4 03.tex,1.5,1.6 04.tex,1.4,1.5
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#8">[ date ]</a>
+              <a href="thread.html#8">[ thread ]</a>
+              <a href="subject.html#8">[ subject ]</a>
+              <a href="author.html#8">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/plfs-svn">More information about the Plfs-svn
+mailing list</a><br>
+</body></html>

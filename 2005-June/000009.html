@@ -1,0 +1,255 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Plfs-svn] doc 02.tex,1.7,1.8 05.tex,1.3,1.4 03.tex,1.5,1.6 04.tex,1.4,1.5
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/plfs-svn/2005-June/index.html" >
+   <LINK REL="made" HREF="mailto:plfs-svn%40lists.berlios.de?Subject=Re%3A%20%5BPlfs-svn%5D%20doc%2002.tex%2C1.7%2C1.8%2005.tex%2C1.3%2C1.4%2003.tex%2C1.5%2C1.6%2004.tex%2C1.4%2C1.5&In-Reply-To=%3C200506130132.j5D1WQ130295%40bat.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000008.html">
+   <LINK REL="Next"  HREF="000010.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Plfs-svn] doc 02.tex,1.7,1.8 05.tex,1.3,1.4 03.tex,1.5,1.6 04.tex,1.4,1.5</H1>
+    <B>xscript</B> 
+    <A HREF="mailto:plfs-svn%40lists.berlios.de?Subject=Re%3A%20%5BPlfs-svn%5D%20doc%2002.tex%2C1.7%2C1.8%2005.tex%2C1.3%2C1.4%2003.tex%2C1.5%2C1.6%2004.tex%2C1.4%2C1.5&In-Reply-To=%3C200506130132.j5D1WQ130295%40bat.berlios.de%3E"
+       TITLE="[Plfs-svn] doc 02.tex,1.7,1.8 05.tex,1.3,1.4 03.tex,1.5,1.6 04.tex,1.4,1.5">nobody at sheep.berlios.de
+       </A><BR>
+    <I>Mon Jun 13 03:32:26 CEST 2005</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000008.html">[Plfs-svn] doc 03.tex,1.4,1.5 04.tex,1.3,1.4
+</A></li>
+        <LI>Next message: <A HREF="000010.html">[Plfs-svn] doc 02.tex,1.9,1.10 03.tex,1.7,1.8
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#9">[ date ]</a>
+              <a href="thread.html#9">[ thread ]</a>
+              <a href="subject.html#9">[ subject ]</a>
+              <a href="author.html#9">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Update of /cvsroot/plfs/doc
+In directory sheep:/tmp/cvs-serv17023
+
+Modified Files:
+	02.tex 05.tex 03.tex 04.tex 
+Log Message:
+Explicaciones de seguridad
+
+Index: 02.tex
+===================================================================
+RCS file: /cvsroot/plfs/doc/02.tex,v
+retrieving revision 1.7
+retrieving revision 1.8
+diff -C2 -d -r1.7 -r1.8
+*** 02.tex	12 Jun 2005 22:00:32 -0000	1.7
+--- 02.tex	13 Jun 2005 01:32:21 -0000	1.8
+***************
+*** 31,34 ****
+--- 31,35 ----
+  		comunicaciones (en nuestro caso, ser&#237;a \dpld).
+  
++ 	% TODO: intercambiar dpld &lt;--&gt; dplc ?!?! tendria mas sentido?
+  	\item [\dpld:] Deployer Daemon\\
+  		Componente encargado de mandar las &#243;rdenes de desplegamiento y
+***************
+*** 103,110 ****
+  cercano} que da un servicio concreto.
+  
+  Para ello, se podr&#237;a utilizar un servicio DNS al estilo Akamai, tal como
+  utiliza google, o algo como CoDNS \cite{CoDNS}, subproyecto de Codeen
+  \cite{Codeen}, que nos dan la IP del nodo m&#225;s cercano que proporciona un
+! servicio conreto.
+  
+  
+--- 104,168 ----
+  cercano} que da un servicio concreto.
+  
++ % + TODO: consensuar
+  Para ello, se podr&#237;a utilizar un servicio DNS al estilo Akamai, tal como
+  utiliza google, o algo como CoDNS \cite{CoDNS}, subproyecto de Codeen
+  \cite{Codeen}, que nos dan la IP del nodo m&#225;s cercano que proporciona un
+! servicio conreto. Cabe notar, adem&#225;s, que &#233;ste es un servicio que PlanetLab
+! planea dar a todos sus nodos y que tiene como tarea pendiente implementar.
+! 
+! Como el servicio de DNS se utiliza siempre de forma transparente, aunque d&#233; un
+! servicio no habitual de localidad, no lo pondremos en el esquema de nuestros
+! componentes para mejorar su claridad.
+! 
+! 
+! 
+! \section{Seguridad}
+! 
+! % TODO: seguramente deber&#225; moverse de sitio
+! Puesto que la autentificaci&#243;n de todos los clientes es obligatoria en
+! PlanetLab, cada vez que un cliente (\dpld en uestro caso) intente una operaci&#243;n
+! con un cliente (\dplc) con el que no est&#225; autentificado, deber&#225; primero relizar
+! el proceso de autentificaci&#243;n.
+! 
+! Dicho proceso va dirigido a proporcionar la clave y password SSH a los \dplc y
+! verificar que pueden realizar la conexi&#243;n (que no cerrar&#225;n hasta
+! pasado un cierto tiempo de inactividad, para evitar la costosa operaci&#243;n de
+! realizar la conexi&#243;n SSH), verificando as&#237; la autenticidad del acceso del
+! cliente a un slice concreto.
+! 
+! Para ello, cada \dpld tiene su par de llaves, que llamaremos $K_{pub_{d}}$ y
+! $K_{priv_{d}}$ para las claves p&#250;blica y privada, respectivamente, y los \dplc,
+! que son administrados por una &#250;nica identidad de confianza, tienen todos un
+! mismo par de llaves, que llamaremos $K_{pub_{c}}$ y $K_{priv_{c}}$.
+! 
+! %TODO: como controlar que los datos vienen de alguien ya autentificado?
+! 
+! %TODO: como avisa un nodo a un cliente que este no esta autentificado?
+! 
+! Los pasos a seguir son:
+! 
+! \begin{enumerate}
+! 	\item Se consulta con PlanetLab Central y se escoge un nodo cualquiera
+! 		del slice con el que nos queremos comunicar.
+! 		\label{step:auth_get_node}
+! 
+! 	\item Se pide la clave p&#250;blica del nodo seleccionado, $K_{pub_{c}}$, y
+! 		se le da la p&#250;blica del cliente, $K_{pub_{d}}$.\\
+! 		Si el nodo no responde, se vuleve al paso
+! 		\ref{step:auth_get_node}).
+! 
+! 	\item Se hace una petici&#243;n de registro unicast al nodo, con la clave y
+! 		password SSH encriptados con $K_{pub_{c}}$, juntamente con
+! 		$K_{pub_{d}}$ para el env&#237;o encriptado de datos sensibles
+! 		(listado de ficheros, etc.).\\
+! 		Si la operaci&#243;n falla, se aborta el proceso de registro.
+! 		Si el nodo no responde, se vuleve al paso
+! 		\ref{step:auth_get_node}).
+! 
+! 	\item Se hace una petici&#243;n de registro multicast al grupo, con la clave
+! 		y password SSH encriptados con $K_{pub_{c}}$, juntamente con
+! 		$K_{pub_{d}}$.
+! \end{enumerate}
+! % - TODO: consensuar
+  
+  
+
+Index: 05.tex
+===================================================================
+RCS file: /cvsroot/plfs/doc/05.tex,v
+retrieving revision 1.3
+retrieving revision 1.4
+diff -C2 -d -r1.3 -r1.4
+*** 05.tex	7 Jun 2005 14:38:34 -0000	1.3
+--- 05.tex	13 Jun 2005 01:32:21 -0000	1.4
+***************
+*** 7,10 ****
+--- 7,36 ----
+  
+  
++ \section{Autentificaci&#243;n}
++ 
++ Para la autentificaci&#243;n con \dplc y verificaci&#243;n de los datos firmados de &#233;ste,
++ hace falta previamente conocer su clave p&#250;blica.
++ %TODO: que pasa al recibir datos firmados/encriptados con una clave que no
++ %conocemos?
++ 
++ Con tal de acceder un cliente (\dpld) a un nodo (\dplc), &#233;ste debe primero
++ registrarse envi&#225;ndole la clave y password de SSH \textbf{encriptados} con la
++ clave p&#250;blica de \dplc (para evitar que informaci&#243;n sensible sea capturada).
++ 
++ Para ello, hay dos primitivas de autentificaci&#243;n, una que hace una
++ autentificaci&#243;n con respuesta (destinada a un solo nodo), y otra que hace la
++ autentificaci&#243;n con todo el grupo multicast, pero que no da ning&#250;n resultado.
++ 
++ El proceso completo es el que se muestra en la figura \ref{fig:act_-_auth}.
++ 
++ \begin{figure}[h]
++ 	\centering
++ 	\includegraphics[scale=1.0]{act_-_auth.eps}
++ 	\caption{Proceso de autentificaci&#243;n}
++ 	\label{fig:act_-_auth}
++ \end{figure}
++ 
++ 
++ 
+  \section{Listado de nodos}
+  
+
+Index: 03.tex
+===================================================================
+RCS file: /cvsroot/plfs/doc/03.tex,v
+retrieving revision 1.5
+retrieving revision 1.6
+diff -C2 -d -r1.5 -r1.6
+*** 03.tex	12 Jun 2005 22:08:13 -0000	1.5
+--- 03.tex	13 Jun 2005 01:32:21 -0000	1.6
+***************
+*** 1,4 ****
+--- 1,6 ----
+  \chapter{Dise&#241;o de los componentes}
+  
++ %TODO: se&#241;alar qu&#233; m&#243;dulos encriptan/desencriptan datos
++ 
+  \textbf{\textit{En este cap&#237;tulo definimos las principales funcionalidades que
+  deben implementar cada uno de los componentes.}}
+
+Index: 04.tex
+===================================================================
+RCS file: /cvsroot/plfs/doc/04.tex,v
+retrieving revision 1.4
+retrieving revision 1.5
+diff -C2 -d -r1.4 -r1.5
+*** 04.tex	12 Jun 2005 22:08:13 -0000	1.4
+--- 04.tex	13 Jun 2005 01:32:21 -0000	1.5
+***************
+*** 1,4 ****
+--- 1,6 ----
+  \chapter{Comunicaci&#243;n entre los componentes}
+  
++ %TODO: se&#241;alar qu&#233; comunicaciones van encriptadas/desencriptadas
++ 
+  \textbf{\textit{En este cap&#237;tulo comentamos diferentes implementaciones de la
+  comunicaci&#243;n entre componentes del sistema. Como veremos, nos centraremos en
+***************
+*** 36,41 ****
+  
+  % TODO: hace falta esta explicaci&#243;n? ya esta hecha antes...
+! Cuando se realice una operaci&#243;n (\textt{ls},\texttt{mv}, etc) en el sistema de
+! ficheros \plfs, el m&#243;dulo de kernel \kplfs que implementa estas operaciones,
+  deber&#225; informar dichos eventos al m&#243;dulo a nivel usuario \uplfs (el cual deber&#225;
+  realizar las operaciones pertinentes).
+--- 38,43 ----
+  
+  % TODO: hace falta esta explicaci&#243;n? ya esta hecha antes...
+! Cuando se realice una operaci&#243;n (\texttt{ls},\texttt{mv}, etc) en el sistema
+! de ficheros \plfs, el m&#243;dulo de kernel \kplfs que implementa estas operaciones,
+  deber&#225; informar dichos eventos al m&#243;dulo a nivel usuario \uplfs (el cual deber&#225;
+  realizar las operaciones pertinentes).
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000008.html">[Plfs-svn] doc 03.tex,1.4,1.5 04.tex,1.3,1.4
+</A></li>
+	<LI>Next message: <A HREF="000010.html">[Plfs-svn] doc 02.tex,1.9,1.10 03.tex,1.7,1.8
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#9">[ date ]</a>
+              <a href="thread.html#9">[ thread ]</a>
+              <a href="subject.html#9">[ subject ]</a>
+              <a href="author.html#9">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/plfs-svn">More information about the Plfs-svn
+mailing list</a><br>
+</body></html>

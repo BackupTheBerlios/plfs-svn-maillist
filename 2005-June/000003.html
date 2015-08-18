@@ -1,0 +1,276 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Plfs-svn] doc 00-plfs.bib,1.1,1.2 02.tex,1.3,1.4 03.tex,1.1,1.2
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/plfs-svn/2005-June/index.html" >
+   <LINK REL="made" HREF="mailto:plfs-svn%40lists.berlios.de?Subject=Re%3A%20%5BPlfs-svn%5D%20doc%2000-plfs.bib%2C1.1%2C1.2%2002.tex%2C1.3%2C1.4%2003.tex%2C1.1%2C1.2&In-Reply-To=%3C200506092142.j59LgP109230%40bat.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000002.html">
+   <LINK REL="Next"  HREF="000004.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Plfs-svn] doc 00-plfs.bib,1.1,1.2 02.tex,1.3,1.4 03.tex,1.1,1.2</H1>
+    <B>guruburux</B> 
+    <A HREF="mailto:plfs-svn%40lists.berlios.de?Subject=Re%3A%20%5BPlfs-svn%5D%20doc%2000-plfs.bib%2C1.1%2C1.2%2002.tex%2C1.3%2C1.4%2003.tex%2C1.1%2C1.2&In-Reply-To=%3C200506092142.j59LgP109230%40bat.berlios.de%3E"
+       TITLE="[Plfs-svn] doc 00-plfs.bib,1.1,1.2 02.tex,1.3,1.4 03.tex,1.1,1.2">nobody at sheep.berlios.de
+       </A><BR>
+    <I>Thu Jun  9 23:42:25 CEST 2005</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000002.html">[Plfs-svn] doc ToDo.txt,1.1,1.2
+</A></li>
+        <LI>Next message: <A HREF="000004.html">[Plfs-svn] doc 00-plfs.bib,1.2,1.3 00-plfs.tex,1.1,1.2 02.tex,1.5,1.6 03.tex,1.3,1.4 04.tex,1.2,1.3
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#3">[ date ]</a>
+              <a href="thread.html#3">[ thread ]</a>
+              <a href="subject.html#3">[ subject ]</a>
+              <a href="author.html#3">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Update of /cvsroot/plfs/doc
+In directory sheep:/tmp/cvs-serv10306/doc
+
+Modified Files:
+	00-plfs.bib 02.tex 03.tex 
+Log Message:
+Quedada poc productiva :P del 8 de Juny
+
+
+Index: 00-plfs.bib
+===================================================================
+RCS file: /cvsroot/plfs/doc/00-plfs.bib,v
+retrieving revision 1.1
+retrieving revision 1.2
+diff -C2 -d -r1.1 -r1.2
+*** 00-plfs.bib	27 May 2005 19:44:51 -0000	1.1
+--- 00-plfs.bib	9 Jun 2005 21:42:23 -0000	1.2
+***************
+*** 34,37 ****
+--- 34,46 ----
+  }
+  
++ @manual{rfc-track,
++ title = {Tree-Based ACK (TRACK) Building Block for Reliable Multicast
++ Transport},
++ author = {Brian Whetten, Dah Ming Chiu, Miriam Kadansky},
++ organization = {RMT Working Group, IETF},
++ month = {December},
++ year = {2003}
++ }
++ 
+  
+  ######################
+***************
+*** 95,97 ****
+--- 104,109 ----
+  	note = {\\<A HREF="http://www.cs.arizona.edu/stork/">http://www.cs.arizona.edu/stork/</A>}
+  }
++ 
++ 
++ 
+  
+
+Index: 02.tex
+===================================================================
+RCS file: /cvsroot/plfs/doc/02.tex,v
+retrieving revision 1.3
+retrieving revision 1.4
+diff -C2 -d -r1.3 -r1.4
+*** 02.tex	7 Jun 2005 14:38:34 -0000	1.3
+--- 02.tex	9 Jun 2005 21:42:23 -0000	1.4
+***************
+*** 434,448 ****
+  
+  El modo en que \dplc realiza las operaciones de inscripci&#243;n/desuscripci&#243;n y en
+! qu&#233; momento, lo veremos con m&#225;s detalle en el cap&#237;tulo \ref{TODO}.
+! %TODO CITE
+  
+  Por otra parte el m&#243;dulo \dpld tambi&#233;n deber&#225; suscribirse al grupo multicast
+  como oyente, para poder estar atento a los cambios que se produzcan en los
+  ficheros \texttt{shared} (en cuyo caso deber&#225; realizar las operaciones que
+! veremos en el apartado 2.x de Redespliegue).
+  
+  En consecuencia, \dpld deber&#225; poder desuscribirse de un grupo, operaci&#243;n que
+  realizar&#225; o bien cuando se detenga el daemon o transcurrido cierto tiempo de
+! \textit{timeout}. %TODO aclarar este timeout.
+  
+  Para hacer que la red multicast sea fiable nos hemos planteado las siguientes
+--- 434,447 ----
+  
+  El modo en que \dplc realiza las operaciones de inscripci&#243;n/desuscripci&#243;n y en
+! qu&#233; momento, lo veremos con m&#225;s detalle en el apartado \ref{sect:umcc}.
+  
+  Por otra parte el m&#243;dulo \dpld tambi&#233;n deber&#225; suscribirse al grupo multicast
+  como oyente, para poder estar atento a los cambios que se produzcan en los
+  ficheros \texttt{shared} (en cuyo caso deber&#225; realizar las operaciones que
+! veremos en el apartado \ref{sect:redeployment}).
+  
+  En consecuencia, \dpld deber&#225; poder desuscribirse de un grupo, operaci&#243;n que
+  realizar&#225; o bien cuando se detenga el daemon o transcurrido cierto tiempo de
+! \textit{timeout} por inactividad.
+  
+  Para hacer que la red multicast sea fiable nos hemos planteado las siguientes
+***************
+*** 454,485 ****
+  		decir, no se realizan ACK's.
+  
+! 	\item[Tree ACK (TRACK)]:\\
+! 		En este caso, se env&#237;an ACK's pero agrupados hacia la ra&#237;z del
+! 		&#225;rbol multicast. Es decir, los ACK's de los &quot;hijos&quot; se agrupan
+! 		en el &quot;padre&quot; para enviar un s&#243;lo ACK.
+  \end{description}
+  
+! En nuestro caso, hemos pensado que ser&#237;a positivo elegir la opci&#243;n de TRACK,
+! puesto que &#233;sta nos permitir&#237;a que \dpld realizara los tipos de
+! desplegamiento que presentamos en el apartado \ref{sect-redeployment}.
+! %TODO CITE
+  
+  
+  
+  \section{Redespliegue}
+! \label{sect-redeployment}
+  
+! El componente \fam se encarga de la monitorizaci&#243;n de los ficheros etiquetados
+  como \texttt{shared}. De este modo, cuando se produce una modificaci&#243;n
+  incontrolada de estos ficheros, este componente avisa al \dplc para que a su
+  vez lo notifique a los nodos \dpld responsables de ese fichero, es decir,
+  aquellos que est&#233;n suscritos como oyentes de ese grupo multicast, o slice, del
+! cual son los responsables de los despliegues que se realicen en &#233;l.
+  
+! De modo que entenderemos por modificaci&#243;n incontrolada, aquella que no provenga
+! de uno de estos nodos responsables.
+  
+! Cuando los nodos \dpld responsables se percaten del aviso, proceder&#225;n a
+! redesplegar el fichero siguiendo los pasos a continuaci&#243;n:
+  
+  \begin{enumerate}
+--- 453,491 ----
+  		decir, no se realizan ACK's.
+  
+! 	\item[Tree ACK (TRACK) \cite{rfc-track}]:\\
+! 		Los receptores env&#237;an peri&#243;dicamente informes a el nodo padre
+! 		sobre lo que han recibido y lo que no (paquetes perdidos).\\
+! 		Cada padre agrega los informes de sus hijos en un TRACK y los
+! 		pasa a su padre.\\
+! 		Se repite el proceso hasta el nodo del que proceden los
+! 		paquetes, el cual puede realizar las operaciones
+! 		correspondientes seg&#250;n el TRACK total obtenido.
+! 
+  \end{description}
+  
+! Creemos que TRACK es m&#225;s completo y nos permitir&#237;a realizar m&#225;s operaciones a
+! nivel de despliegue. Por ejemplo, en caso de recibir un TRACK donde se informa
+! de que han fallado algunos paquetes, el cliente de multicast \umcc informar&#237;a a
+! \dpld el cual se encargar&#237;a de reenviar los datos.
+  
+  
+  
+  \section{Redespliegue}
+! \label{sect:redeployment}
+  
+! El componente \famon se encarga de la monitorizaci&#243;n de los ficheros etiquetados
+  como \texttt{shared}. De este modo, cuando se produce una modificaci&#243;n
+  incontrolada de estos ficheros, este componente avisa al \dplc para que a su
+  vez lo notifique a los nodos \dpld responsables de ese fichero, es decir,
+  aquellos que est&#233;n suscritos como oyentes de ese grupo multicast, o slice, del
+! cual son los responsables de los despliegues que se realicen en &#233;l, y por
+! lo tanto deben encargarse de invalidar los ficheros afectados del sistema de
+! ficheros \plfs.
+  
+! Entenderemos por modificaci&#243;n incontrolada, aquella que no provenga de uno de
+! estos nodos responsables (nodos con \dpld).
+  
+! Cuando \famon avisa al \dplc de ese nodo, &#233;ste proceder&#225; a redesplegar el
+! fichero siguiendo los pasos a continuaci&#243;n:
+  
+  \begin{enumerate}
+***************
+*** 487,491 ****
+  		aplicaci&#243;n en ese nodo corrupto.
+  
+! 	\item se despliegan los ficheros desde un nodo del mismo slice (un nodo
+  		hermano hablando desde el punto de vista de &#225;rboles de
+  		directorios) que no sea corrupto.
+--- 493,497 ----
+  		aplicaci&#243;n en ese nodo corrupto.
+  
+! 	\item se despliega el fichero desde un nodo del mismo slice (un nodo
+  		hermano hablando desde el punto de vista de &#225;rboles de
+  		directorios) que no sea corrupto.
+
+Index: 03.tex
+===================================================================
+RCS file: /cvsroot/plfs/doc/03.tex,v
+retrieving revision 1.1
+retrieving revision 1.2
+diff -C2 -d -r1.1 -r1.2
+*** 03.tex	27 May 2005 19:44:51 -0000	1.1
+--- 03.tex	9 Jun 2005 21:42:23 -0000	1.2
+***************
+*** 139,142 ****
+--- 139,143 ----
+  
+  \section{\umcc}
++ \label{sect:umcc}
+  
+  &#201;ste es el m&#243;dulo cliente de la red multicast, b&#225;sicamente tiene dos
+***************
+*** 305,309 ****
+  
+  &#201;ste m&#243;dulo est&#225; situado en las m&#225;quinas clientes de la red, y se encarga de
+! monitorizar los ficheros que han sido desplegados en un nodo de un slice.
+  
+  Para ello debe haber una instancia corriendo en cada m&#225;quina virtual que
+--- 306,313 ----
+  
+  &#201;ste m&#243;dulo est&#225; situado en las m&#225;quinas clientes de la red, y se encarga de
+! monitorizar los ficheros que han sido desplegados en un nodo de un slice. De
+! modo que cuando detecta una modificaci&#243;n sobre uno de dichos ficheros, \famon
+! avisa a \dplc (el cu&#225;l se encargar&#225; de avisar a los \dpld encargados del slice
+! acerca de la invalidaci&#243;n del fichero).
+  
+  Para ello debe haber una instancia corriendo en cada m&#225;quina virtual que
+***************
+*** 312,315 ****
+  % TODO: operaciones de viliar / dejar paths concretos?
+  
+! % TODO: buscar un buen programa que lo haga =&gt; famd?
+! 
+--- 316,318 ----
+  % TODO: operaciones de viliar / dejar paths concretos?
+  
+! % TODO: buscar un buen programa que lo haga =&gt; famd?
+\ No newline at end of file
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000002.html">[Plfs-svn] doc ToDo.txt,1.1,1.2
+</A></li>
+	<LI>Next message: <A HREF="000004.html">[Plfs-svn] doc 00-plfs.bib,1.2,1.3 00-plfs.tex,1.1,1.2 02.tex,1.5,1.6 03.tex,1.3,1.4 04.tex,1.2,1.3
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#3">[ date ]</a>
+              <a href="thread.html#3">[ thread ]</a>
+              <a href="subject.html#3">[ subject ]</a>
+              <a href="author.html#3">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/plfs-svn">More information about the Plfs-svn
+mailing list</a><br>
+</body></html>

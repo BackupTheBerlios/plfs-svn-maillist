@@ -1,0 +1,182 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Plfs-svn] doc 03.tex,1.8,1.9
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/plfs-svn/2005-June/index.html" >
+   <LINK REL="made" HREF="mailto:plfs-svn%40lists.berlios.de?Subject=Re%3A%20%5BPlfs-svn%5D%20doc%2003.tex%2C1.8%2C1.9&In-Reply-To=%3C200506141903.j5EJ3J111665%40bat.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000010.html">
+   <LINK REL="Next"  HREF="000012.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Plfs-svn] doc 03.tex,1.8,1.9</H1>
+    <B>xscript</B> 
+    <A HREF="mailto:plfs-svn%40lists.berlios.de?Subject=Re%3A%20%5BPlfs-svn%5D%20doc%2003.tex%2C1.8%2C1.9&In-Reply-To=%3C200506141903.j5EJ3J111665%40bat.berlios.de%3E"
+       TITLE="[Plfs-svn] doc 03.tex,1.8,1.9">nobody at sheep.berlios.de
+       </A><BR>
+    <I>Tue Jun 14 21:03:19 CEST 2005</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000010.html">[Plfs-svn] doc 02.tex,1.9,1.10 03.tex,1.7,1.8
+</A></li>
+        <LI>Next message: <A HREF="000012.html">[Plfs-svn] doc 03.tex,1.9,1.10
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#11">[ date ]</a>
+              <a href="thread.html#11">[ thread ]</a>
+              <a href="subject.html#11">[ subject ]</a>
+              <a href="author.html#11">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Update of /cvsroot/plfs/doc
+In directory sheep:/tmp/cvs-serv13652
+
+Modified Files:
+	03.tex 
+Log Message:
+Estrategia de sincronizacion
+
+Index: 03.tex
+===================================================================
+RCS file: /cvsroot/plfs/doc/03.tex,v
+retrieving revision 1.8
+retrieving revision 1.9
+diff -C2 -d -r1.8 -r1.9
+*** 03.tex	14 Jun 2005 00:55:27 -0000	1.8
+--- 03.tex	14 Jun 2005 19:03:17 -0000	1.9
+***************
+*** 81,85 ****
+  
+  	% TODO(?): validaciones? temporalidad?     ES &#218;TIL PLANTE&#193;RSELO?
+! 	
+  	% TODO: quien lo utiliza?
+  	\item[\texttt{getInfoFilesShared (slice\_name)}] :\\
+--- 81,85 ----
+  
+  	% TODO(?): validaciones? temporalidad?     ES &#218;TIL PLANTE&#193;RSELO?
+! 
+  	% TODO: quien lo utiliza?
+  	\item[\texttt{getInfoFilesShared (slice\_name)}] :\\
+***************
+*** 329,333 ****
+  %   - deben responder todos
+  %   - alguien puede enga&#241;arnos y dar un numero equivocado?
+! %   -&gt; dplc nos firma la version -&gt; garantiza la validez (como el algodon, 
+  %     dplc nuca enga&#241;a)
+  % o el numero que den la mayoria
+--- 329,333 ----
+  %   - deben responder todos
+  %   - alguien puede enga&#241;arnos y dar un numero equivocado?
+! %   -&gt; dplc nos firma la version -&gt; garantiza la validez (como el algodon,
+  %     dplc nuca enga&#241;a)
+  % o el numero que den la mayoria
+***************
+*** 347,350 ****
+--- 347,421 ----
+  % - protocolo de las transparencias
+  % - parar y esperar al siguiente deployment
++ %
++ % ---------------------------------------------------------------
++ % =&gt; Posible estrategia de sincronizacion por numero de version:
++ % ---------------------------------------------------------------
++ %
++ % =&gt; Precondicion: queremos que todos los nodos tengan el mismo shared
++ %     siempre!
++ %
++ % =&gt; Formato de version:
++ % - numeracion consecutiva
++ % - numeracion consecutiva con separadores (.), siendo el override del usuario
++ %   el que permite avanzar a una version superior no consecutiva 1.9 -&gt; 2.0
++ % - fecha en formato universal (estan los nodos de PL en hora?); como los
++ %   deploys no son muy frecuentes, es bastante fiable aun con desfases de
++ %   reloj
++ %
++ % =&gt; Como obtener nodos cualesquiera
++ % hacer una peticion de la lista a PLC y seleccionar uno aleatoriamente
++ %
++ % =&gt; Pasos
++ % - cada nodo en su slice guarda un fichero con el numero de version que se le
++ %   ha desplegado (si no existe, se supono que no hay despliegue previo)
++ %   (posibilidad de ver un fichero en unshared?)
++ %   (posibilidad de ver un fichero en shared con el valor maximo actual?)
++ %
++ % - dpld obtiene el numero de version que actualmente hay en la red
++ %   * cuando:
++ %     - al hacer el deploy, pregunta
++ %     - en alguna operacion anterior ya lo va haciendo en background por si a
++ %       caso
++ %     - al hacer el registro unicast, el resultado es la version actual
++ %   * como:
++ %     - repositorio central (a modo transaccional, solo se actualiza el valor
++ %       si se hace el deploy de como minimo N nodos - 1? quizas mas si
++ %       utilizamos tecnicas de fallo bizantino? -)
++ %     - se guarda el valor en la maquina dpld (demasiado rigido, no podemos
++ %       hacer deploy desde diferentes sitios)
++ %     - se le hace poner un valor en un fichero al usuario (esta bien como
++ %       posibilidad para forzar el valor, pero no como obligacion)
++ %     - el valor que nos den de una sola consulta (podria estar desfasado)
++ %     - el valor maximo de N preguntas
++ %       * si el valor se guarda en el slice, podria estar falseado? a quien le
++ %         interesa si es su propio slice?
++ %       * si el valor se guarda en dplc, seguro que siempre es el ultimo que
++ %         dplc ha visto, no?
++ %     - el valor mas ``votado'', por si hubiera alguno falseado (lo habria?)
++ %
++ % - hace el deploy indicando el nuevo numero de version
++ %
++ % - existe la posibilidad de que los dplc hagan piggybacking indicando su
++ %   version actual, para que dpld:
++ %   * se ponga al dia (hay algun problema en coger la mayor aunque solo la
++ %     tenga uno? -&gt; pero que no sea de un corrupto!)
++ %   * dpld le indique que necesita actualizacion y
++ %     - le haga un deploy unicast
++ %     - le indique un vecino cercano con la version ``buena''
++ %
++ % - al arrancar o recuperar la conexion un dplc, obtiene el numero ``bueno''
++ %   de version tal como lo hace dpld
++ %
++ % - si esta desactualizado, obtiene la nueva version de un peer no corrupto
++ %
++ % - cada dplc guarda los ultimos N nodos (incluyendo dpld) que le han
++ %   preguntado su version, si se le cambia la version, lo notifica a estos
++ %
++ % - cuando llega una notificacion de cambio de version, se hace un redeploy
++ %   desde ese peer originador del mensaje
++ %   [ deploy virico para los que se han quedado rezagados ]
++ %
++ % - existencia de un fichero en /plfs/slices/&lt;slice&gt; que al hacerle un cat
++ %   intenta contactar todos los nodos y mostrar su estado
+  
+  
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000010.html">[Plfs-svn] doc 02.tex,1.9,1.10 03.tex,1.7,1.8
+</A></li>
+	<LI>Next message: <A HREF="000012.html">[Plfs-svn] doc 03.tex,1.9,1.10
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#11">[ date ]</a>
+              <a href="thread.html#11">[ thread ]</a>
+              <a href="subject.html#11">[ subject ]</a>
+              <a href="author.html#11">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/plfs-svn">More information about the Plfs-svn
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,295 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Plfs-svn] doc 00-plfs.bib,1.3,1.4
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/plfs-svn/2005-June/index.html" >
+   <LINK REL="made" HREF="mailto:plfs-svn%40lists.berlios.de?Subject=Re%3A%20%5BPlfs-svn%5D%20doc%2000-plfs.bib%2C1.3%2C1.4&In-Reply-To=%3C200506122152.j5CLqT124419%40bat.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000005.html">
+   <LINK REL="Next"  HREF="000007.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Plfs-svn] doc 00-plfs.bib,1.3,1.4</H1>
+    <B>xscript</B> 
+    <A HREF="mailto:plfs-svn%40lists.berlios.de?Subject=Re%3A%20%5BPlfs-svn%5D%20doc%2000-plfs.bib%2C1.3%2C1.4&In-Reply-To=%3C200506122152.j5CLqT124419%40bat.berlios.de%3E"
+       TITLE="[Plfs-svn] doc 00-plfs.bib,1.3,1.4">nobody at sheep.berlios.de
+       </A><BR>
+    <I>Sun Jun 12 23:52:29 CEST 2005</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000005.html">[Plfs-svn] doc 00-plfs.tex,1.2,1.3
+</A></li>
+        <LI>Next message: <A HREF="000007.html">[Plfs-svn] doc 02.tex,1.6,1.7
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#6">[ date ]</a>
+              <a href="thread.html#6">[ thread ]</a>
+              <a href="subject.html#6">[ subject ]</a>
+              <a href="author.html#6">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Update of /cvsroot/plfs/doc
+In directory sheep:/tmp/cvs-serv2478
+
+Modified Files:
+	00-plfs.bib 
+Log Message:
+Reordenacion de la bilbiografia
+
+Index: 00-plfs.bib
+===================================================================
+RCS file: /cvsroot/plfs/doc/00-plfs.bib,v
+retrieving revision 1.3
+retrieving revision 1.4
+diff -C2 -d -r1.3 -r1.4
+*** 00-plfs.bib	12 Jun 2005 20:13:22 -0000	1.3
+--- 00-plfs.bib	12 Jun 2005 21:52:27 -0000	1.4
+***************
+*** 2,11 ****
+  @manual{PLFS,
+  	title = {PlanetLab File System},
+! 	note = {\\<A HREF="http://developer.berlios.de/projects/plfs">http://developer.berlios.de/projects/plfs</A>}
+  }
+  
+  @manual{ParPipelinedDist,
+  	title = {Parallel pipelined wide-area file distribution},
+! 	note = {\\<A HREF="http://cs199.planet-lab.org/ideas.html">http://cs199.planet-lab.org/ideas.html</A>}
+  }
+  
+--- 2,11 ----
+  @manual{PLFS,
+  	title = {PlanetLab File System},
+! 	note = {\url{<A HREF="http://developer.berlios.de/projects/plfs">http://developer.berlios.de/projects/plfs</A>}}
+  }
+  
+  @manual{ParPipelinedDist,
+  	title = {Parallel pipelined wide-area file distribution},
+! 	note = {\url{<A HREF="http://cs199.planet-lab.org/ideas.html">http://cs199.planet-lab.org/ideas.html</A>}}
+  }
+  
+***************
+*** 14,43 ****
+  # Multicast
+  
+  @manual{ESM,
+  	title = {End System Multicast (ESM)},
+! 	note = {\\<A HREF="http://esm.cs.cmu.edu/">http://esm.cs.cmu.edu/</A>}
+  }
+  
+  @manual{LSAM,
+  	title = {Large-Scale Active Multicast},
+! 	note = {\\<A HREF="http://www.isi.edu/lsam/">http://www.isi.edu/lsam/</A>}
+  }
+  
+  @manual{LMDD,
+  	title = {Logistical Multicast for Data Distribution},
+! 	note = {\\<A HREF="http://loci.cs.utk.edu/modules.php?name=Publications&amp;d_op=ViewPublication&amp;lid=243">http://loci.cs.utk.edu/modules.php?name=Publications&amp;d_op=ViewPublication&amp;lid=243</A>}
+! }
+! 
+! @manual{Araneola,
+! 	title = {Araneola},
+! 	note = {\\<A HREF="http://">http://</A>}
+! }
+! 
+! @manual{rfc-track,
+! 	title = {Tree-Based ACK (TRACK) Building Block for Reliable Multicast Transport},
+! 	author = {Brian Whetten, Dah Ming Chiu, et al.},
+! 	organization = {RMT Working Group, IETF},
+! 	month = {December},
+! 	year = {2003}
+  }
+  
+--- 14,45 ----
+  # Multicast
+  
++ @manual{Araneola,
++ 	title = {Araneola},
++ 	note = {\url{<A HREF="http://">http://</A>}}
++ }
++ 
++ @misc{rfc-track,
++ 	title = {Tree-Based ACK (TRACK) Building Block for Reliable Multicast Transport},
++ 	author = {Brian Whetten et al.},
++ 	howpublished = {RMT Working Group, IETF},
++ 	month = {December},
++ 	year = {2003}
++ }
++ 
++ #--- no utilizados ---
++ 
+  @manual{ESM,
+  	title = {End System Multicast (ESM)},
+! 	note = {\url{<A HREF="http://esm.cs.cmu.edu">http://esm.cs.cmu.edu</A>}}
+  }
+  
+  @manual{LSAM,
+  	title = {Large-Scale Active Multicast},
+! 	note = {\url{<A HREF="http://www.isi.edu/lsam">http://www.isi.edu/lsam</A>}}
+  }
+  
+  @manual{LMDD,
+  	title = {Logistical Multicast for Data Distribution},
+! 	note = {\url{<A HREF="http://loci.cs.utk.edu/modules.php?name=Publications&amp;d_op=ViewPublication&amp;lid=243">http://loci.cs.utk.edu/modules.php?name=Publications&amp;d_op=ViewPublication&amp;lid=243</A>}}
+  }
+  
+***************
+*** 46,105 ****
+  # FileSystems
+  
+  @manual{Intermezzo,
+  	title = {Intermezzo File System},
+! 	note = {\\<A HREF="http://www.inter-mezzo.org/">http://www.inter-mezzo.org/</A>}
+  }
+  
+  
+  ######################
+! # Xarxes
+  
+  @manual{RON,
+  	title = {Resilient Overlay Networks},
+! 	note = {\\<A HREF="http://nms.lcs.mit.edu/projects/ron/">http://nms.lcs.mit.edu/projects/ron/</A>}
+  }
+  
+  
+  ######################
+! # Desconegut
+! 
+! @manual{NWS,
+! 	title = {Network Weather System},
+! 	note = {\\<A HREF="http://nws.cs.ucsb.edu/">http://nws.cs.ucsb.edu/</A>}
+! }
+  
+! @manual{RSTB,
+! 	title = {A Replicated Server Testbed},
+! 	note = {\\<A HREF="http://www.cs.utk.edu/~mbeck/replication.html">http://www.cs.utk.edu/~mbeck/replication.html</A>}
+  }
+  
+! @manual{PLSDT,
+! 	title = {PlanetLab Slice Deploy Toolkit},
+! 	note = {\\<A HREF="http://jabber.services.planet-lab.org/php/software/tools.php">http://jabber.services.planet-lab.org/php/software/tools.php</A>}
+  }
+  
+  @manual{PLC,
+  	title = {PlanetLab Central API Documentation},
+! 	note = {\\<A HREF="http://www.planet-lab.org/doc/api/plc\_api/">http://www.planet-lab.org/doc/api/plc\_api/</A>}
+  }
+  
+! @manual{CoDNS,
+! 	title = {CoDNS},
+! 	note = {\\<A HREF="http://codeen.cs.princeton.edu/codns/">http://codeen.cs.princeton.edu/codns/</A>}
+  }
+  
+! @manual{Codeen,
+! 	title = {Codeen},
+! 	note = {\\<A HREF="http://codeen.cs.princeton.edu/">http://codeen.cs.princeton.edu/</A>}
+  }
+  
+  @manual{Bamboo,
+  	title = {The Bamboo Distributed Hash Table},
+! 	note = {\\<A HREF="http://bamboo-dht.org/">http://bamboo-dht.org/</A>}
+  }
+  
+  @manual{Stork,
+  	title = {Stork},
+! 	note = {\\<A HREF="http://www.cs.arizona.edu/stork/">http://www.cs.arizona.edu/stork/</A>}
+  }
+  
+--- 48,113 ----
+  # FileSystems
+  
++ #--- no utilizados ---
++ 
+  @manual{Intermezzo,
+  	title = {Intermezzo File System},
+! 	note = {\url{<A HREF="http://www.inter-mezzo.org/">http://www.inter-mezzo.org/</A>}}
+  }
+  
+  
+  ######################
+! # Redes
+! 
+! #--- no utilizados ---
+  
+  @manual{RON,
+  	title = {Resilient Overlay Networks},
+! 	note = {\url{<A HREF="http://nms.lcs.mit.edu/projects/ron/">http://nms.lcs.mit.edu/projects/ron/</A>}}
+  }
+  
+  
+  ######################
+! # Otros
+  
+! @manual{Codeen,
+! 	title = {Codeen},
+! 	note = {\url{<A HREF="http://codeen.cs.princeton.edu/">http://codeen.cs.princeton.edu/</A>}}
+  }
+  
+! @manual{CoDNS,
+! 	title = {CoDNS},
+! 	note = {\url{<A HREF="http://codeen.cs.princeton.edu/codns/">http://codeen.cs.princeton.edu/codns/</A>}}
+  }
+  
+  @manual{PLC,
+  	title = {PlanetLab Central API Documentation},
+! 	note = {\url{<A HREF="http://www.planet-lab.org/doc/api/plc_api/">http://www.planet-lab.org/doc/api/plc_api/</A>}}
+  }
+  
+! #--- no utilizados ---
+! 
+! @manual{NWS,
+! 	title = {Network Weather System},
+! 	note = {\url{<A HREF="http://nws.cs.ucsb.edu/">http://nws.cs.ucsb.edu/</A>}}
+  }
+  
+! @manual{RSTB,
+! 	title = {A Replicated Server Testbed},
+! 	note = {\url{<A HREF="http://www.cs.utk.edu/~mbeck/replication.html">http://www.cs.utk.edu/~mbeck/replication.html</A>}}
+! }
+! 
+! @manual{PLSDT,
+! 	title = {PlanetLab Slice Deploy Toolkit},
+! 	note = {\url{<A HREF="http://jabber.services.planet-lab.org/php/software/tools.php">http://jabber.services.planet-lab.org/php/software/tools.php</A>}}
+  }
+  
+  @manual{Bamboo,
+  	title = {The Bamboo Distributed Hash Table},
+! 	note = {\url{<A HREF="http://bamboo-dht.org/">http://bamboo-dht.org/</A>}}
+  }
+  
+  @manual{Stork,
+  	title = {Stork},
+! 	note = {\url{<A HREF="http://www.cs.arizona.edu/stork/">http://www.cs.arizona.edu/stork/</A>}}
+  }
+  
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000005.html">[Plfs-svn] doc 00-plfs.tex,1.2,1.3
+</A></li>
+	<LI>Next message: <A HREF="000007.html">[Plfs-svn] doc 02.tex,1.6,1.7
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#6">[ date ]</a>
+              <a href="thread.html#6">[ thread ]</a>
+              <a href="subject.html#6">[ subject ]</a>
+              <a href="author.html#6">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/plfs-svn">More information about the Plfs-svn
+mailing list</a><br>
+</body></html>

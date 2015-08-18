@@ -1,0 +1,446 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Plfs-svn] doc 02.tex,1.1,1.2 05.tex,1.1,1.2
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/plfs-svn/2005-June/index.html" >
+   <LINK REL="made" HREF="mailto:plfs-svn%40lists.berlios.de?Subject=Re%3A%20%5BPlfs-svn%5D%20doc%2002.tex%2C1.1%2C1.2%2005.tex%2C1.1%2C1.2&In-Reply-To=%3C200505312250.j4VMoTm25997%40bat.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   
+   <LINK REL="Next"  HREF="000001.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Plfs-svn] doc 02.tex,1.1,1.2 05.tex,1.1,1.2</H1>
+    <B>guruburux</B> 
+    <A HREF="mailto:plfs-svn%40lists.berlios.de?Subject=Re%3A%20%5BPlfs-svn%5D%20doc%2002.tex%2C1.1%2C1.2%2005.tex%2C1.1%2C1.2&In-Reply-To=%3C200505312250.j4VMoTm25997%40bat.berlios.de%3E"
+       TITLE="[Plfs-svn] doc 02.tex,1.1,1.2 05.tex,1.1,1.2">nobody at sheep.berlios.de
+       </A><BR>
+    <I>Wed Jun  1 00:50:29 CEST 2005</I>
+    <P><UL>
+        
+        <LI>Next message: <A HREF="000001.html">[Plfs-svn] doc 02.tex,1.2,1.3 05.tex,1.2,1.3
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#0">[ date ]</a>
+              <a href="thread.html#0">[ thread ]</a>
+              <a href="subject.html#0">[ subject ]</a>
+              <a href="author.html#0">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Update of /cvsroot/plfs/doc
+In directory sheep:/tmp/cvs-serv30068/doc
+
+Modified Files:
+	02.tex 05.tex 
+Log Message:
+Modificacions a l'apartat 2 segons el que vam quedar per a la presentacio!
+
+
+Index: 02.tex
+===================================================================
+RCS file: /cvsroot/plfs/doc/02.tex,v
+retrieving revision 1.1
+retrieving revision 1.2
+diff -C2 -d -r1.1 -r1.2
+*** 02.tex	27 May 2005 19:44:51 -0000	1.1
+--- 02.tex	31 May 2005 22:50:26 -0000	1.2
+***************
+*** 66,69 ****
+--- 66,77 ----
+  \section{L&#243;gica del sistema}
+  
++ El sistema, adem&#225;s de las funcionalidades propias de despliegue de
++ aplicaciones, debe poder realizar las siguientes operaciones para poder saber
++ como llegar y a d&#243;nde puede llegar. Es decir, debe poder conseguir la
++ informaci&#243;n necesaria sobre los slices disponibles en PlanetLab y sus nodos, y
++ por otra parte, debe poder descubrir su punto de entrada a la red multicast
++ desde el exterior. \\
++ De modo que el sistema debe permitir:
++ 
+  \begin{itemize}
+  	\item Descubrimiento de slices en PlanetLab \\
+***************
+*** 85,89 ****
+  		Como en el caso anterior, nos hace falta preguntar a PlanetLab por los
+  		nodos, tanto a nivel general, como por los asociados a un slice.
+! 
+  	\item Descubrimiento del nodo de entrada a la red de distribuci&#243;n
+  		multicast.
+--- 93,97 ----
+  		Como en el caso anterior, nos hace falta preguntar a PlanetLab por los
+  		nodos, tanto a nivel general, como por los asociados a un slice.
+! 	
+  	\item Descubrimiento del nodo de entrada a la red de distribuci&#243;n
+  		multicast.
+***************
+*** 91,96 ****
+  
+  Con tal de minimizar la latencia y ocupaci&#243;n innecesaria del ancho de banda,
+! para todos los anteriores puntos hace falta encontrar el nodo m&#225;s cercano que
+! da un servicio concreto.
+  
+  Para ello, se podr&#237;a utilizar un servicio DNS al estilo Akamai, tal como
+--- 99,104 ----
+  
+  Con tal de minimizar la latencia y ocupaci&#243;n innecesaria del ancho de banda,
+! para todos los anteriores puntos hace falta encontrar el nodo \textbf{m&#225;s
+! cercano} que da un servicio concreto.
+  
+  Para ello, se podr&#237;a utilizar un servicio DNS al estilo Akamai, tal como
+***************
+*** 100,111 ****
+  
+  
+- 
+  \section{Esquema de \plfs (PlanetLab File System)}
+  
+! %\newpage
+  \begin{code}
+  	/plfs
+  	|-slices
+  	| `-&lt;slice&gt;
+  	|   |-key
+  	|   |-passwd
+--- 108,141 ----
+  
+  
+  \section{Esquema de \plfs (PlanetLab File System)}
+  
+! Antes de comentar el esquema del &#225;rbol de ficheros y directorios de \plfs, es
+! necesario dejar bien claro que hemos dise&#241;ado el sistema con la idea de
+! permitir una cierta flexibilidad al usuario y que pueda diferenciar entre dos
+! tipos de ficheros:
+! \begin{description}
+! 
+! 	\item [Los ficheros que se despliegan como shared]:\\
+! 		Que todos los nodos del slice destino tendr&#225;n por igual, bajo la
+! 		condici&#243;n que adem&#225;s deben de ser inmutables (ej: el programa
+! 		principal de la aplicaci&#243;n).
+! 	\item [Los ficheros que se despliegan como unshared]:\\
+! 		Que ser&#225;n propios de cada nodo (ej: cada nodo podr&#237;a asumir un
+! 		rol distinto si tuviera ficheros de configuraci&#243;n propios).
+! 
+! \end{description}
+! 
+! Como veremos ahora, y durante todo el documento, esta idea es b&#225;sica para el
+! dise&#241;o que planteamos, puesto que en varios puntos el comportamiento del
+! sistema depender&#225; del tipo de ficheros que estemos tratando.
+! 
+! Dicho lo cual, pasamos a presentar el esquema del &#225;rbol de directorios y
+! ficheros como se puede apreciar en la figura:
+! 
+  \begin{code}
+  	/plfs
+  	|-slices
+  	| `-&lt;slice&gt;
++ 	|   |-backup
+  	|   |-key
+  	|   |-passwd
+***************
+*** 121,131 ****
+  \end{code}
+  
+  \begin{description}
+  	\item[\texttt{/plfs/slices/\textless{}slice\textgreater/key}] :\\
+! 		&#201;ste fichero contiene la clave privada ssh correspondiente al slice.
+  
+  	\item[\texttt{/plfs/slices/\textless{}slice\textgreater/passwd}] :\\
+! 		&#201;ste fichero contiene el password asociado a la clave privada del
+! 		slice.
+  
+  	\item[\texttt{/plfs/slices/\textless{}slice\textgreater/script}] :\\
+--- 151,170 ----
+  \end{code}
+  
++ A continuaci&#243;n una explicaci&#243;n de los diferentes ficheros y directorios:
++ 
+  \begin{description}
++ 	
++ 	\item[\texttt{/plfs/slices/\textless{}slice\textgreater/backup}] :\\
++ 		Este fichero contiene una URI que indica el repositorio central
++ 		de backup donde se puedan encontrar los ficheros \texttt{shared}
++ 		en su versi&#243;n original (ver el apartado 2.x sobre Redespliegue).
++ 		
+  	\item[\texttt{/plfs/slices/\textless{}slice\textgreater/key}] :\\
+! 		Este fichero contiene la clave privada ssh correspondiente al
+! 		slice.
+  
+  	\item[\texttt{/plfs/slices/\textless{}slice\textgreater/passwd}] :\\
+! 		Este fichero contiene el password asociado a la clave privada
+! 		del slice.
+  
+  	\item[\texttt{/plfs/slices/\textless{}slice\textgreater/script}] :\\
+***************
+*** 198,202 ****
+  		concreto (representado por el directorio
+  		\texttt{/plfs/slices/\textless{slice\textgreater/nodes/\textless{}node\textgreater/unshared}}).
+! 		Es decir, \textbf{no} permitiremos operaciones como:
+  
+  		\begin{itemize}
+--- 237,241 ----
+  		concreto (representado por el directorio
+  		\texttt{/plfs/slices/\textless{slice\textgreater/nodes/\textless{}node\textgreater/unshared}}).
+! 		Es decir, \textbf{NO} permitiremos operaciones como:
+  
+  		\begin{itemize}
+***************
+*** 213,217 ****
+  	\item [\textit{edici&#243;n}] :\\
+  		La edici&#243;n de un fichero provocar&#225; el redespliegue del mismo
+! 		una vez sea cerrado.
+  
+  	\item [\textit{lectura}] :\\
+--- 252,256 ----
+  	\item [\textit{edici&#243;n}] :\\
+  		La edici&#243;n de un fichero provocar&#225; el redespliegue del mismo
+! 		una vez sea cerrado (ver apartado 2.x sobre Redespliegue)
+  
+  	\item [\textit{lectura}] :\\
+***************
+*** 288,295 ****
+  \section{L&#243;gica de Desplegamiento}
+  
+! Cada vez que se realiza un move/copy en el sistema de ficheros para el
+! desplegamiento, los pasos a seguir son estos:
+  
+! \textit{Precondici&#243;n}: El slice destino est&#225; ya creado (\texttt{mkdir}).
+  
+  \begin{enumerate}
+--- 327,356 ----
+  \section{L&#243;gica de Desplegamiento}
+  
+! Despu&#233;s de pensar diferentes posibilidades sobre como el usuario podr&#237;a llevar
+! a cabo realmente el despliegue, mediante el sistema de ficheros, hemos llegado
+! a la conclusi&#243;n de que el usuario deber&#225; realizar los siguientes pasos:
+  
+! \begin{enumarete}
+! 	
+! 	\item 
+! 		El usuario realiza \texttt{mv/cp} de los ficheros que
+! 		desea desplegar, y estos son transmitidos mediante el proceso de
+! 		despliegue que a continuaci&#243;n comentamos.
+! 	
+! 	\item 
+! 		A continuaci&#243;n el usuario realiza \texttt{mv/cp} del script de
+! 		arranque de despliegue, que tambi&#233;n es desplegado mediante el
+! 		mismo proceso hacia los nodos destino.
+! 
+! \end{enumarete}
+! 
+! Adem&#225;s, y como es obvio dada la naturaleza del propio sistema de ficheros, se
+! deber&#225; cumplir la siguiente precondici&#243;n antes de poder realizar el despliegue:
+! 	\textit{Precondici&#243;n}: El slice destino est&#225; ya creado
+! 	(ej: \texttt{mkdir}).\\
+! 	
+! Una vez aclarado lo anterior, pasamos a describir como se realizar&#237;a de forma
+! general el despliegue de los ficheros a trav&#233;s de los diferentes componentes
+! del sistema:
+  
+  \begin{enumerate}
+***************
+*** 336,342 ****
+  		presente. Para ello, primero ejecuta el \textbf{deploy} y luego
+  		el \textbf{start}.
+! 		En el apartado de sincronizaci&#243;n veremos con m&#225;s detalle las
+! 		diferentes posibilidades al realizar la ejecuci&#243;n del script
+! 		(sincronizaci&#243;n).
+  		%TODO: CITE =&gt; cite de que?!
+  \end{enumerate}
+--- 397,403 ----
+  		presente. Para ello, primero ejecuta el \textbf{deploy} y luego
+  		el \textbf{start}.
+! 		%En el apartado de sincronizaci&#243;n veremos con m&#225;s detalle las
+! 		%diferentes posibilidades al realizar la ejecuci&#243;n del script
+! 		%(sincronizaci&#243;n).  &lt;&lt;-------- JA NO TE SENTIT
+  		%TODO: CITE =&gt; cite de que?!
+  \end{enumerate}
+***************
+*** 347,352 ****
+  % Si todo es correcto anunciar al dpld??? Escalabilidad? ACK's
+  
+- 
+- 
+  \section{Comunicaci&#243;n Multicast}
+  
+--- 408,411 ----
+***************
+*** 376,379 ****
+--- 435,446 ----
+  %TODO CITE
+  
++ Por otra parte el m&#243;dulo \dpld tambi&#233;n deber&#225; suscribirse al grupo multicast
++ como oyente, para poder estar atento a los cambios que se produzcan en los
++ ficheros \texttt{shared} (en cuyo caso deber&#225; realizar las operaciones que
++ veremos en el apartado 2.x de Redespliegue).
++ En consecuencia, \dpld deber&#225; poder desuscribirse de un grupo, operaci&#243;n que
++ realizar&#225; o bien cuando se detenga el daemon o transcurrido cierto tiempo de
++ \textit{timeout}. %TODO aclarar este timeout.
++ 
+  Para hacer que la red multicast sea fiable nos hemos planteado las siguientes
+  posibilidades:
+***************
+*** 396,436 ****
+  
+  
+  
+! \section{Tipos de Desplegamiento}
+! \label{sect-deployment}
+  
+! Los tipos de desplegamiento que hemos considerado interesantes son los
+! siguientes:
+  
+! \begin{description}
+! 	\item[Desplegamiento immediato]:\\
+! 		Una vez desplegados los ficheros, se ejecuta el script de
+! 		desplegamiento y arranque.
+  
+! 	\item[Desplegamiento sincronizado]:\\
+! 		Gracias a la implementaci&#243;n TRACK de Multicast, podemos hacer
+! 		un desplegamiento sincronizado a dos pasos, en primer lugar
+! 		realizamos el desplegamiento de los ficheros, y una vez recibido
+! 		el ACK agrupado realizamos una segunda comunicaci&#243;n multicast
+! 		para ejecutar el script de desplegamiento y arranque.
+  
+! 	\item[Redesplegamiento]:\\
+! 		Se realiza de la misma manera que un desplegamiento immediato,
+! 		pero como reacci&#243;n a una suscripci&#243;n de un nuevo nodo, o bien
+! 		al reintento de desplegamiento en un nodo en el que ha fallado
+! 		un desplegamiento previo (NACK).
+  
+! 		% TODO ESPECIFICAR COMO ELEGIR EL TIPO DE DESPLEGAMIENTO
+  
+! 		% TODO(~) (Apartats3.2, 3.6 i 4.3):
+! 		%
+! 		%	A&#241;adir un nodo al slice una vez ya desplegada la
+! 		%aplicacion
+! 		%
+! 		%	Solucio: DPLC d'aquest node, ha de comunicar a DPLD que
+! 		%	s'hi afegeix al qual se li ha de fer desplegament!! (3.2, 3.6)
+! 		%		=&gt; PROTOCOL DE WARNINGS AMB AUTENTIFICACIO!!! (4.1)
+! 		%
+! \end{description}
+  
+  
+--- 463,525 ----
+  
+  
++ \section{Redespliegue}
+  
+! El componente \fam se encarga de la monitorizaci&#243;n de los ficheros etiquetados
+! como \texttt{shared}. De este modo, cuando se produce una modificaci&#243;n
+! incontrolada de estos ficheros, este componente avisa al \dplc para que a su
+! vez lo notifique a los nodos \dpld responsables de ese fichero, es decir,
+! aquellos que est&#233;n suscritos como oyentes de ese grupo multicast, o slice, del
+! cual son los responsables de los despliegues que se realicen en &#233;l.\\
+! De modo que entenderemos por modificaci&#243;n incontrolada, aquella que no provenga
+! de uno de estos nodos responsables.
+  
+! Cuando los nodos \dpld responsables se percaten del aviso, proceder&#225;n a
+! redesplegar el fichero siguiendo los pasos a continuaci&#243;n:
+  
+! \begin{enumarate}
+  
+! 	\item \dplc realiza un script-&gt;stop deteniendo moment&#225;neamente la
+! 		aplicaci&#243;n en ese nodo corrupto.
+! 	
+! 	\item se despliegan los ficheros desde un nodo del mismo slice (un nodo
+! 		hermano hablando desde el punto de vista de &#225;rboles de
+! 		directorios) que no sea corrupto.
+! 	
+! 	\item \dplc realiza un script-&gt;start para reiniciar la aplicaci&#243;n.
+! 	
+! \end{enumarate}
+  
+! Obviamente surge un posible problema como consecuencia de este dise&#241;o, y es que
+! podr&#237;a suceder que por circunstancias no existiera ning&#250;n otro nodo no corrupto
+! (o bien porque todos los hermanos lo est&#225;n, o bien porque es el &#250;nico nodo
+! activo del slice).
+  
+! De modo que la soluci&#243;n que proponemos es la de mantener en un repositorio
+! central los ficheros originales desplegados como \texttt{shared}.
+! La URI de este repositorio es la que se indica en el fichero \texttt{backup}
+! que hemos presentado en el esquema de \plfs.
+  
+! Finalmente, si la recuperaci&#243;n mediante este repositorio no pudiera llevarse a
+! cabo, se invalidar&#237;a el nodo del slice, y quedar&#237;a como corrupto.
+! 
+! 
+! 
+! 
+! 
+! 
+! 
+! 
+! 
+! 
+! 
+! % TODO(~) (Apartats3.2, 3.6 i 4.3):
+! %
+! %	A&#241;adir un nodo al slice una vez ya desplegada la
+! %aplicacion
+! %
+! %	Solucio: DPLC d'aquest node, ha de comunicar a DPLD que
+! %	s'hi afegeix al qual se li ha de fer desplegament!! (3.2, 3.6)
+! %		=&gt; PROTOCOL DE WARNINGS AMB AUTENTIFICACIO!!! (4.1)
+! %
+  
+  
+
+Index: 05.tex
+===================================================================
+RCS file: /cvsroot/plfs/doc/05.tex,v
+retrieving revision 1.1
+retrieving revision 1.2
+diff -C2 -d -r1.1 -r1.2
+*** 05.tex	27 May 2005 19:44:51 -0000	1.1
+--- 05.tex	31 May 2005 22:50:26 -0000	1.2
+***************
+*** 6,10 ****
+  
+  
+- 
+  \section{Listado de nodos}
+  
+--- 6,9 ----
+***************
+*** 142,145 ****
+  	\caption{Eliminaci&#243;n de un nodo de un grupo}
+  	\label{fig:act_-_delete}
+! \end{figure}
+! 
+--- 141,143 ----
+  	\caption{Eliminaci&#243;n de un nodo de un grupo}
+  	\label{fig:act_-_delete}
+! \end{figure}
+\ No newline at end of file
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	<LI>Next message: <A HREF="000001.html">[Plfs-svn] doc 02.tex,1.2,1.3 05.tex,1.2,1.3
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#0">[ date ]</a>
+              <a href="thread.html#0">[ thread ]</a>
+              <a href="subject.html#0">[ subject ]</a>
+              <a href="author.html#0">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/plfs-svn">More information about the Plfs-svn
+mailing list</a><br>
+</body></html>

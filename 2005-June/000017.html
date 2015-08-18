@@ -1,0 +1,256 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Plfs-svn] doc 02.tex,1.12,1.13 03.tex,1.12,1.13
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/plfs-svn/2005-June/index.html" >
+   <LINK REL="made" HREF="mailto:plfs-svn%40lists.berlios.de?Subject=Re%3A%20%5BPlfs-svn%5D%20doc%2002.tex%2C1.12%2C1.13%2003.tex%2C1.12%2C1.13&In-Reply-To=%3C200506191501.j5JF17I13726%40bat.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000016.html">
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Plfs-svn] doc 02.tex,1.12,1.13 03.tex,1.12,1.13</H1>
+    <B>guruburux</B> 
+    <A HREF="mailto:plfs-svn%40lists.berlios.de?Subject=Re%3A%20%5BPlfs-svn%5D%20doc%2002.tex%2C1.12%2C1.13%2003.tex%2C1.12%2C1.13&In-Reply-To=%3C200506191501.j5JF17I13726%40bat.berlios.de%3E"
+       TITLE="[Plfs-svn] doc 02.tex,1.12,1.13 03.tex,1.12,1.13">nobody at sheep.berlios.de
+       </A><BR>
+    <I>Sun Jun 19 17:01:07 CEST 2005</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000016.html">[Plfs-svn] doc 01.tex,1.2,1.3 02.tex,1.11,1.12 03.tex,1.11,1.12 04.tex,1.7,1.8
+</A></li>
+        
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#17">[ date ]</a>
+              <a href="thread.html#17">[ thread ]</a>
+              <a href="subject.html#17">[ subject ]</a>
+              <a href="author.html#17">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Update of /cvsroot/plfs/doc
+In directory sheep:/tmp/cvs-serv18346/doc
+
+Modified Files:
+	02.tex 03.tex 
+Log Message:
+Versio Final Revisada.
+Correccio d'algunas referencies invalides i text fora de marges.
+
+
+Index: 02.tex
+===================================================================
+RCS file: /cvsroot/plfs/doc/02.tex,v
+retrieving revision 1.12
+retrieving revision 1.13
+diff -C2 -d -r1.12 -r1.13
+*** 02.tex	19 Jun 2005 13:03:39 -0000	1.12
+--- 02.tex	19 Jun 2005 15:01:05 -0000	1.13
+***************
+*** 122,131 ****
+  		Este fichero contiene la clave p&#250;blica del \dpld para que
+  		funcione todo el sistema de seguridad (ver apartado
+! 		\ref{sect:segurity}).
+  
+  	\item[\texttt{/plfs/privatekey}] :\\
+  		Este fichero contiene la clave privada del \dpld para que
+  		funcione todo el sistema de seguridad (ver apartado
+! 		\ref{sect:segurity}).
+  
+  	\item[\texttt{/plfs/slices/\textless{}slice\textgreater/backup}] :\\
+--- 122,131 ----
+  		Este fichero contiene la clave p&#250;blica del \dpld para que
+  		funcione todo el sistema de seguridad (ver apartado
+! 		\ref{sect:security}).
+  
+  	\item[\texttt{/plfs/privatekey}] :\\
+  		Este fichero contiene la clave privada del \dpld para que
+  		funcione todo el sistema de seguridad (ver apartado
+! 		\ref{sect:security}).
+  
+  	\item[\texttt{/plfs/slices/\textless{}slice\textgreater/backup}] :\\
+***************
+*** 245,249 ****
+  	\item [\textit{edici&#243;n}] :\\
+  		La edici&#243;n de un fichero provocar&#225; el redespliegue del mismo
+! 		una vez sea cerrado (ver apartado \label{sect:redeployment}).
+  
+  	\item [\textit{lectura}] :\\
+--- 245,249 ----
+  	\item [\textit{edici&#243;n}] :\\
+  		La edici&#243;n de un fichero provocar&#225; el redespliegue del mismo
+! 		una vez sea cerrado (ver apartado \ref{sect:redeployment}).
+  
+  	\item [\textit{lectura}] :\\
+***************
+*** 469,473 ****
+  
+  Esta informaci&#243;n se deriva a trav&#233;s del contenido del acceso a los ficheros
+! \texttt{/plfs/slices/\textless{}slice\textgreater/nodes/\textless{}
+  node\textgreater/version}, dejando comprobar en qu&#233; estado se encuentra el
+  despliegue al comparar la versi&#243;n de los nodos con la actual.
+--- 469,473 ----
+  
+  Esta informaci&#243;n se deriva a trav&#233;s del contenido del acceso a los ficheros
+! \texttt{/plfs/slices/ \textless{}slice\textgreater/nodes/\textless{}
+  node\textgreater/version}, dejando comprobar en qu&#233; estado se encuentra el
+  despliegue al comparar la versi&#243;n de los nodos con la actual.
+
+Index: 03.tex
+===================================================================
+RCS file: /cvsroot/plfs/doc/03.tex,v
+retrieving revision 1.12
+retrieving revision 1.13
+diff -C2 -d -r1.12 -r1.13
+*** 03.tex	19 Jun 2005 13:03:39 -0000	1.12
+--- 03.tex	19 Jun 2005 15:01:05 -0000	1.13
+***************
+*** 62,65 ****
+--- 62,66 ----
+  
+  \section{\dpld}
++ \label{sect:dpld}
+  
+  Las operaciones que \dpld ofrece son las siguientes:
+***************
+*** 164,188 ****
+  	\item[\texttt{getSlices ()}] :\\
+  		Permite obtener la lista de slices que se han dado de alta en
+! 		PlanetLab
+  
+  	\item[\texttt{getNodes ()}] :\\
+  		Permite obtener la lista de nodos que se han dado de alta en
+! 		PlanetLab
+  
+  	\item[\texttt{getSliceNodes (slice\_name)}] :\\
+! 		Permite obtener la lista de los nodos que hay en un slice
+  
+  	\item[\texttt{getSliceNodesAny (slice\_name, num)}] :\\
+  		Permite obtener una lista de \texttt{num} nodos cualesquiera de
+! 		un slice
+  
+  	\item[\texttt{getSliceNodesNumber (slice\_name)}] :\\
+! 		Permite obtener el numero de nodos que hay en un slice
+  
+  	\item[\texttt{getSliceNode (slice\_name, node\_name)}] :\\
+! 		Permite obtener informaci&#243;n de un nodo de un slice
+  
+  	\item[\texttt{getSliceNodeAny (slice\_name)}] :\\
+! 		Permite obtener un nodo cualquiera de un slice
+  
+  	\item[\texttt{getSliceNodeNearest (slice\_name)}] :\\
+--- 165,189 ----
+  	\item[\texttt{getSlices ()}] :\\
+  		Permite obtener la lista de slices que se han dado de alta en
+! 		PlanetLab.
+  
+  	\item[\texttt{getNodes ()}] :\\
+  		Permite obtener la lista de nodos que se han dado de alta en
+! 		PlanetLab.
+  
+  	\item[\texttt{getSliceNodes (slice\_name)}] :\\
+! 		Permite obtener la lista de los nodos que hay en un slice.
+  
+  	\item[\texttt{getSliceNodesAny (slice\_name, num)}] :\\
+  		Permite obtener una lista de \texttt{num} nodos cualesquiera de
+! 		un slice.
+  
+  	\item[\texttt{getSliceNodesNumber (slice\_name)}] :\\
+! 		Permite obtener el numero de nodos que hay en un slice.
+  
+  	\item[\texttt{getSliceNode (slice\_name, node\_name)}] :\\
+! 		Permite obtener informaci&#243;n de un nodo de un slice.
+  
+  	\item[\texttt{getSliceNodeAny (slice\_name)}] :\\
+! 		Permite obtener un nodo cualquiera de un slice.
+  
+  	\item[\texttt{getSliceNodeNearest (slice\_name)}] :\\
+***************
+*** 192,196 ****
+  
+  	\item[\texttt{getNodeSlices (node\_name)}] :\\
+! 		Permite obtener la lista de los slices de un nodo
+  \end{description}
+  
+--- 193,197 ----
+  
+  	\item[\texttt{getNodeSlices (node\_name)}] :\\
+! 		Permite obtener la lista de los slices de un nodo.
+  \end{description}
+  
+***************
+*** 278,282 ****
+  Como todos los accesos a la red multicast se hacen a trav&#233;s de \umcc, se puede
+  f&#225;cilmente utilizar una implementaci&#243;n ya existente de una red overlay
+! multicast en modo usuario
+  
+  En cuanto a las implementaciones, hemos encontrado varias \cite{Araneola, ESM,
+--- 279,283 ----
+  Como todos los accesos a la red multicast se hacen a trav&#233;s de \umcc, se puede
+  f&#225;cilmente utilizar una implementaci&#243;n ya existente de una red overlay
+! multicast en modo usuario.
+  
+  En cuanto a las implementaciones, hemos encontrado varias \cite{Araneola, ESM,
+***************
+*** 289,292 ****
+--- 290,294 ----
+  
+  \section{\dplc}
++ \label{sect:dplc}
+  
+  &#201;ste m&#243;dulo, situado en cada una de las m&#225;quinas clientes (o receptoras de las
+***************
+*** 413,423 ****
+  \begin{description}
+  	\item[\texttt{watch (path)}] :\\
+! 		Activa la monitorizaci&#243;n sobre \texttt{path}
+  
+  	\item[\texttt{unwatch (path)}] :\\
+! 		Desactiva la monitorizaci&#243;n sobre \texttt{path}
+  
+  	\item[\texttt{stop ()}] :\\
+! 		Detiene \famon
+  \end{description}
+  
+--- 415,425 ----
+  \begin{description}
+  	\item[\texttt{watch (path)}] :\\
+! 		Activa la monitorizaci&#243;n sobre \texttt{path}.
+  
+  	\item[\texttt{unwatch (path)}] :\\
+! 		Desactiva la monitorizaci&#243;n sobre \texttt{path}.
+  
+  	\item[\texttt{stop ()}] :\\
+! 		Detiene \famon.
+  \end{description}
+  
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000016.html">[Plfs-svn] doc 01.tex,1.2,1.3 02.tex,1.11,1.12 03.tex,1.11,1.12 04.tex,1.7,1.8
+</A></li>
+	
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#17">[ date ]</a>
+              <a href="thread.html#17">[ thread ]</a>
+              <a href="subject.html#17">[ subject ]</a>
+              <a href="author.html#17">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/plfs-svn">More information about the Plfs-svn
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,1045 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Plfs-svn] doc 01.tex,1.2,1.3 02.tex,1.11,1.12 03.tex,1.11,1.12 04.tex,1.7,1.8
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/plfs-svn/2005-June/index.html" >
+   <LINK REL="made" HREF="mailto:plfs-svn%40lists.berlios.de?Subject=Re%3A%20%5BPlfs-svn%5D%20doc%2001.tex%2C1.2%2C1.3%2002.tex%2C1.11%2C1.12%2003.tex%2C1.11%2C1.12%2004.tex%2C1.7%2C1.8&In-Reply-To=%3C200506191303.j5JD3fI10829%40bat.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000015.html">
+   <LINK REL="Next"  HREF="000017.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Plfs-svn] doc 01.tex,1.2,1.3 02.tex,1.11,1.12 03.tex,1.11,1.12 04.tex,1.7,1.8</H1>
+    <B>xscript</B> 
+    <A HREF="mailto:plfs-svn%40lists.berlios.de?Subject=Re%3A%20%5BPlfs-svn%5D%20doc%2001.tex%2C1.2%2C1.3%2002.tex%2C1.11%2C1.12%2003.tex%2C1.11%2C1.12%2004.tex%2C1.7%2C1.8&In-Reply-To=%3C200506191303.j5JD3fI10829%40bat.berlios.de%3E"
+       TITLE="[Plfs-svn] doc 01.tex,1.2,1.3 02.tex,1.11,1.12 03.tex,1.11,1.12 04.tex,1.7,1.8">nobody at sheep.berlios.de
+       </A><BR>
+    <I>Sun Jun 19 15:03:41 CEST 2005</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000015.html">[Plfs-svn] doc ToDo.txt,1.3,NONE misc.txt,1.1,NONE
+</A></li>
+        <LI>Next message: <A HREF="000017.html">[Plfs-svn] doc 02.tex,1.12,1.13 03.tex,1.12,1.13
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#16">[ date ]</a>
+              <a href="thread.html#16">[ thread ]</a>
+              <a href="subject.html#16">[ subject ]</a>
+              <a href="author.html#16">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Update of /cvsroot/plfs/doc
+In directory sheep:/tmp/cvs-serv10384
+
+Modified Files:
+	01.tex 02.tex 03.tex 04.tex 
+Log Message:
+Ultimas correcciones
+
+Index: 01.tex
+===================================================================
+RCS file: /cvsroot/plfs/doc/01.tex,v
+retrieving revision 1.2
+retrieving revision 1.3
+diff -C2 -d -r1.2 -r1.3
+*** 01.tex	13 Jun 2005 19:57:46 -0000	1.2
+--- 01.tex	19 Jun 2005 13:03:39 -0000	1.3
+***************
+*** 2,6 ****
+  
+  Tanto la documentaci&#243;n como la implementaci&#243;n se encuentran disponibles en la
+! p&#225;gina del proyecto \cite{PLFS}.
+  
+  Cabe notar que, como inicialmente nos centraremos en las operaciones de
+--- 2,7 ----
+  
+  Tanto la documentaci&#243;n como la implementaci&#243;n se encuentran disponibles en la
+! p&#225;gina del proyecto \cite{PLFS}, que basa su idea inicial en la propuesta de
+! \cite{ParPipelinedDist}.
+  
+  Cabe notar que, como inicialmente nos centraremos en las operaciones de
+
+Index: 02.tex
+===================================================================
+RCS file: /cvsroot/plfs/doc/02.tex,v
+retrieving revision 1.11
+retrieving revision 1.12
+diff -C2 -d -r1.11 -r1.12
+*** 02.tex	17 Jun 2005 18:57:21 -0000	1.11
+--- 02.tex	19 Jun 2005 13:03:39 -0000	1.12
+***************
+*** 32,36 ****
+  		comunicaciones (en nuestro caso, ser&#237;a \dpld).
+  
+! 	% TODO: intercambiar dpld &lt;--&gt; dplc ?!?! tendria mas sentido?
+  	\item [\dpld:] Deployer Daemon\\
+  		Componente encargado de mandar las &#243;rdenes de despliegue y
+--- 32,36 ----
+  		comunicaciones (en nuestro caso, ser&#237;a \dpld).
+  
+! 	% TODO: intercambiar dpld &lt;--&gt; dplc ?!?! tendr&#237;a mas sentido?
+  	\item [\dpld:] Deployer Daemon\\
+  		Componente encargado de mandar las &#243;rdenes de despliegue y
+***************
+*** 128,132 ****
+  		funcione todo el sistema de seguridad (ver apartado
+  		\ref{sect:segurity}).
+! 	
+  	\item[\texttt{/plfs/slices/\textless{}slice\textgreater/backup}] :\\
+  		Este fichero contiene una URI que indica el repositorio central
+--- 128,132 ----
+  		funcione todo el sistema de seguridad (ver apartado
+  		\ref{sect:segurity}).
+! 
+  	\item[\texttt{/plfs/slices/\textless{}slice\textgreater/backup}] :\\
+  		Este fichero contiene una URI que indica el repositorio central
+***************
+*** 136,140 ****
+  
+  	\item[\texttt{/plfs/slices/\textless{}slice\textgreater/key}] :\\
+! 		Este fichero contiene la clave privada ssh correspondiente al
+  		slice.
+  
+--- 136,140 ----
+  
+  	\item[\texttt{/plfs/slices/\textless{}slice\textgreater/key}] :\\
+! 		Este fichero contiene la clave privada SSH correspondiente al
+  		slice.
+  
+***************
+*** 175,179 ****
+  		Este fichero contiene el n&#250;mero de version del &#250;ltimo
+  		despliegue (ver apartado \ref{sect:versioning}).
+! 		
+  	\item[\texttt{/plfs/slices/\textless{}slice\textgreater/nodes/\textless{}
+  		node\textgreater/unshared}] :\\
+--- 175,179 ----
+  		Este fichero contiene el n&#250;mero de version del &#250;ltimo
+  		despliegue (ver apartado \ref{sect:versioning}).
+! 
+  	\item[\texttt{/plfs/slices/\textless{}slice\textgreater/nodes/\textless{}
+  		node\textgreater/unshared}] :\\
+***************
+*** 338,342 ****
+  		Al acceder al sistema de ficheros (\kplfs-\uplfs), hay que
+  		preguntar a un servicio de PlanetLab si existe o no un slice
+! 		dado (al hacer un move de un ejectuable a un directorio que es
+  		un slice) o cu&#225;les existen (al hacer un ls para ver los slices
+  		disponibles).
+--- 338,342 ----
+  		Al acceder al sistema de ficheros (\kplfs-\uplfs), hay que
+  		preguntar a un servicio de PlanetLab si existe o no un slice
+! 		dado (al hacer un move de un ejecutable a un directorio que es
+  		un slice) o cu&#225;les existen (al hacer un ls para ver los slices
+  		disponibles).
+***************
+*** 345,349 ****
+  		PlanetLab de BD \textbf{m&#225;s cercano} (por ahora solo hay uno, y
+  		es \textit{PlanetLab Central}) y preguntarle:
+! 		
+  		\begin{itemize}
+  			\item si existe un slice concreto
+--- 345,349 ----
+  		PlanetLab de BD \textbf{m&#225;s cercano} (por ahora solo hay uno, y
+  		es \textit{PlanetLab Central}) y preguntarle:
+! 
+  		\begin{itemize}
+  			\item si existe un slice concreto
+***************
+*** 367,373 ****
+  Para ello, se podr&#237;a utilizar un servicio DNS al estilo Akamai, tal como
+  utiliza google, o algo como CoDNS \cite{CoDNS}, subproyecto de Codeen
+! \cite{Codeen}, que nos dan la IP del nodo m&#225;s cercano que proporciona un
+! servicio conreto. Cabe notar, adem&#225;s, que &#233;ste es un servicio que PlanetLab
+! planea dar a todos sus nodos y que tiene como tarea pendiente implementar.
+  
+  Como el servicio de DNS se utiliza siempre de forma transparente, aunque d&#233; un
+--- 367,374 ----
+  Para ello, se podr&#237;a utilizar un servicio DNS al estilo Akamai, tal como
+  utiliza google, o algo como CoDNS \cite{CoDNS}, subproyecto de Codeen
+! \cite{Codeen}, o PowerDNS \cite{PowerDNS} con su backend geogr&#225;fico, que nos dan
+! la IP del nodo m&#225;s cercano que proporciona un servicio conreto. Cabe notar,
+! adem&#225;s, que &#233;ste es un servicio que PlanetLab planea dar a todos sus nodos y que
+! tiene como tarea pendiente implementar.
+  
+  Como el servicio de DNS se utiliza siempre de forma transparente, aunque d&#233; un
+***************
+*** 380,386 ****
+  \label{sect:deployment}
+  
+  Despu&#233;s de pensar diferentes posibilidades sobre como el usuario podr&#237;a llevar
+! a cabo realmente el despliegue mediante el sistema de ficheros, hemos llegado
+! a la conclusi&#243;n de que el usuario deber&#225; realizar los siguientes pasos:
+  
+  \begin{enumerate}
+--- 381,391 ----
+  \label{sect:deployment}
+  
++ \nocite{Bamboo}
++ 
+  Despu&#233;s de pensar diferentes posibilidades sobre como el usuario podr&#237;a llevar
+! a cabo realmente el despliegue mediante el sistema de ficheros, y mirar
+! otros proyectos dedicados al despliegue de aplicaciones \cite{PLSDT, RSTB,
+! Stork}, u otras aplicaciones distribuidas para PlanetLab \cite{MON, NWS}, hemos
+! llegado a la conclusi&#243;n de que el usuario deber&#225; realizar los siguientes pasos:
+  
+  \begin{enumerate}
+***************
+*** 396,400 ****
+  Adem&#225;s, y como es obvio dada la naturaleza del propio sistema de ficheros, se
+  deber&#225; cumplir la siguiente precondici&#243;n antes de poder realizar el
+! despliegue:\\
+  
+  \textit{Precondici&#243;n}: El slice destino est&#225; ya creado (ej: \texttt{mkdir}).\\
+--- 401,406 ----
+  Adem&#225;s, y como es obvio dada la naturaleza del propio sistema de ficheros, se
+  deber&#225; cumplir la siguiente precondici&#243;n antes de poder realizar el
+! despliegue:
+! \\
+  
+  \textit{Precondici&#243;n}: El slice destino est&#225; ya creado (ej: \texttt{mkdir}).\\
+***************
+*** 444,448 ****
+  		El m&#243;dulo \umcc hace llegar los paquetes a desplegar al \dplc.
+  
+! 	\item \dplc $\rightarrow$ slice destino (ssh) \\
+  		Se despliega la aplicaci&#243;n (se copian los ficheros), y una vez
+  		hecho esto, se ejecuta el shell script (que es el &#250;ltimo
+--- 450,454 ----
+  		El m&#243;dulo \umcc hace llegar los paquetes a desplegar al \dplc.
+  
+! 	\item \dplc $\rightarrow$ slice destino (SSH) \\
+  		Se despliega la aplicaci&#243;n (se copian los ficheros), y una vez
+  		hecho esto, se ejecuta el shell script (que es el &#250;ltimo
+***************
+*** 455,464 ****
+  
+  Como se ve en el apartado \ref{sect:redeployment}, no es necesario controlar
+! los casos en que algun despliegue no se lleve a cabo en alg&#250;n nodo, ya que
+  entre ellos mismos se encargar&#225;n de mantener la coherencia del despliegue.
+  
+  El fichero \texttt{/plfs/slices/\textless{}slice\textgreater/status} contiene,
+  para cada nodo del slice, si se ha podido contactar con &#233;l y, en caso
+! afirmativo, en qu&#233; estado de despligue se encuentra el nodo.
+  
+  Esta informaci&#243;n se deriva a trav&#233;s del contenido del acceso a los ficheros
+--- 461,470 ----
+  
+  Como se ve en el apartado \ref{sect:redeployment}, no es necesario controlar
+! los casos en que alg&#250;n despliegue no se lleve a cabo en alg&#250;n nodo, ya que
+  entre ellos mismos se encargar&#225;n de mantener la coherencia del despliegue.
+  
+  El fichero \texttt{/plfs/slices/\textless{}slice\textgreater/status} contiene,
+  para cada nodo del slice, si se ha podido contactar con &#233;l y, en caso
+! afirmativo, en qu&#233; estado de despliegue se encuentra el nodo.
+  
+  Esta informaci&#243;n se deriva a trav&#233;s del contenido del acceso a los ficheros
+***************
+*** 573,579 ****
+  		grupo, el nodo detecta que hay una versi&#243;n m&#225;s nueva de
+  		despliegue.
+! 	
+  	\item[Modificaci&#243;n de ficheros] : \\
+! 		Cuando se produce una modificaci&#243;n incontrolada (que no viene 
+  		de uno de los \dpld registrados) de los ficheros de un nodo al
+  		que se le ha realizado un despliegue, y estos son de tipo
+--- 579,585 ----
+  		grupo, el nodo detecta que hay una versi&#243;n m&#225;s nueva de
+  		despliegue.
+! 
+  	\item[Modificaci&#243;n de ficheros] : \\
+! 		Cuando se produce una modificaci&#243;n incontrolada (que no viene
+  		de uno de los \dpld registrados) de los ficheros de un nodo al
+  		que se le ha realizado un despliegue, y estos son de tipo
+***************
+*** 615,619 ****
+  
+  \begin{enumerate}
+! 	\item En caso de no tener los datos de ssh, \dplc se los pedir&#225; a alg&#250;n
+  		nodo de la lista para poder abrir las conexiones.
+  
+--- 621,625 ----
+  
+  \begin{enumerate}
+! 	\item En caso de no tener los datos de SSH, \dplc se los pedir&#225; a alg&#250;n
+  		nodo de la lista para poder abrir las conexiones.
+  
+***************
+*** 650,654 ****
+  r&#225;pida que Internet (ya sea por configuraci&#243;n manual o por detecci&#243;n a trav&#233;s
+  de las interf&#237;cies configuradas), para as&#237; delegar un posible proceso de
+! \textit{redeployment} de todo el grupo a un solo nodo, que luego haria el mismo
+  \textit{redeployment} al resto de nodos del grupo (hasta pudiendo as&#237;
+  aprovecharse de las capacidades de multicast del nivel de enlace).
+--- 656,660 ----
+  r&#225;pida que Internet (ya sea por configuraci&#243;n manual o por detecci&#243;n a trav&#233;s
+  de las interf&#237;cies configuradas), para as&#237; delegar un posible proceso de
+! \textit{redeployment} de todo el grupo a un solo nodo, que luego har&#237;a el mismo
+  \textit{redeployment} al resto de nodos del grupo (hasta pudiendo as&#237;
+  aprovecharse de las capacidades de multicast del nivel de enlace).
+***************
+*** 660,665 ****
+  
+  Puesto que la autentificaci&#243;n de todos los clientes es obligatoria en
+! PlanetLab, cada vez que un cliente (\dpld en uestro caso) intente una operaci&#243;n
+! con un nodo (\dplc) con el que no est&#225; autentificado, deber&#225; primero relizar
+  el proceso de autentificaci&#243;n.
+  
+--- 666,671 ----
+  
+  Puesto que la autentificaci&#243;n de todos los clientes es obligatoria en
+! PlanetLab, cada vez que un cliente (\dpld en nuestro caso) intente una operaci&#243;n
+! con un nodo (\dplc) con el que no est&#225; autentificado, deber&#225; primero realizar
+  el proceso de autentificaci&#243;n.
+  
+***************
+*** 676,680 ****
+  
+  Para controlar que los datos recibidos en los \dplc proceden de un \dpld
+! previamente autentificado, utilizaremos una firma el&#233;ctronica con
+  $K_{priv_{d}}$ (puesto que los \dplc conocen $K_{pub_{d}}$).
+  
+--- 682,686 ----
+  
+  Para controlar que los datos recibidos en los \dplc proceden de un \dpld
+! previamente autentificado, utilizaremos una firma electr&#243;nica con
+  $K_{priv_{d}}$ (puesto que los \dplc conocen $K_{pub_{d}}$).
+  
+***************
+*** 682,686 ****
+  
+  \begin{enumerate}
+! 	\item Se consulta con \pldb y se escoge un nodo cualquiera 
+  		del slice con el que nos queremos comunicar.
+  		\label{step:auth_get_node}
+--- 688,692 ----
+  
+  \begin{enumerate}
+! 	\item Se consulta con \pldb y se escoge un nodo cualquiera
+  		del slice con el que nos queremos comunicar.
+  		\label{step:auth_get_node}
+***************
+*** 688,692 ****
+  	\item Se pide la clave p&#250;blica del nodo seleccionado, $K_{pub_{c}}$, y
+  		se le da la p&#250;blica del \dpld, $K_{pub_{d}}$.\\
+! 		Si el nodo no responde, se vuleve al paso
+  		\ref{step:auth_get_node}).
+  
+--- 694,698 ----
+  	\item Se pide la clave p&#250;blica del nodo seleccionado, $K_{pub_{c}}$, y
+  		se le da la p&#250;blica del \dpld, $K_{pub_{d}}$.\\
+! 		Si el nodo no responde, se vuelve al paso
+  		\ref{step:auth_get_node}).
+  
+***************
+*** 696,700 ****
+  		(listado de ficheros, etc.).\\
+  		Si la operaci&#243;n falla, se aborta el proceso de registro.
+! 		Si el nodo no responde, se vuleve al paso
+  		\ref{step:auth_get_node}).
+  
+--- 702,706 ----
+  		(listado de ficheros, etc.).\\
+  		Si la operaci&#243;n falla, se aborta el proceso de registro.
+! 		Si el nodo no responde, se vuelve al paso
+  		\ref{step:auth_get_node}).
+  
+***************
+*** 711,715 ****
+  		registro, de modo que \dpld no est&#225; registrado en ese nodo.
+  
+! 	\item \dplc cierra la conexi&#243;n ssh por falta de operaciones durante
+  		cierto tiempo de \textit{timeout}, de modo que no se puede
+  		hacer llegar las operaciones enviadas por \dpld.
+--- 717,721 ----
+  		registro, de modo que \dpld no est&#225; registrado en ese nodo.
+  
+! 	\item \dplc cierra la conexi&#243;n SSH por falta de operaciones durante
+  		cierto tiempo de \textit{timeout}, de modo que no se puede
+  		hacer llegar las operaciones enviadas por \dpld.
+***************
+*** 729,743 ****
+  conexiones y si posteriormente se quisiera realizar una operaci&#243;n en
+  alguno de esos slices se deber&#225; reiniciar de cero el proceso de registro
+! (momento en el que se intentar&#225; revalidar los fiheros que tubiera cacheados el
+  \dpld).
+  
+! Ahora bien, \dplc no pierde los datos de conexi&#243;n (clave y password ssh),
+! puesto que como se explica en el apartado \ref{sect:redeployment}, &#233;stos son
+  necesarios para mantener la coherencia del slice.
+  
+! En el caso en que se hayan cambiado la clave y/o el password ssh y que la
+! conexi&#243;n ssh est&#233; cerrada, el \dpld recibir&#237;a algunas operaciones de aviso (ver
+  apartado \ref{sect:dpld}) procedentes de los \dplc destinatarios con la conexi&#243;n
+! ssh cerrada (que ser&#225;n una minor&#237;a debido a la pol&#237;tica de revalidaci&#243;n de
+  registros comentada anteriormente).
+  
+--- 735,749 ----
+  conexiones y si posteriormente se quisiera realizar una operaci&#243;n en
+  alguno de esos slices se deber&#225; reiniciar de cero el proceso de registro
+! (momento en el que se intentar&#225; revalidar los ficheros que tuviera cacheados el
+  \dpld).
+  
+! Ahora bien, \dplc no pierde los datos de conexi&#243;n (clave y password SSH),
+! puesto que como se explica en el apartado \ref{sect:redeployment}, estos son
+  necesarios para mantener la coherencia del slice.
+  
+! En el caso en que se hayan cambiado la clave y/o el password SSH y que la
+! conexi&#243;n SSH est&#233; cerrada, el \dpld recibir&#237;a algunas operaciones de aviso (ver
+  apartado \ref{sect:dpld}) procedentes de los \dplc destinatarios con la conexi&#243;n
+! SSH cerrada (que ser&#225;n una minor&#237;a debido a la pol&#237;tica de revalidaci&#243;n de
+  registros comentada anteriormente).
+  
+
+Index: 03.tex
+===================================================================
+RCS file: /cvsroot/plfs/doc/03.tex,v
+retrieving revision 1.11
+retrieving revision 1.12
+diff -C2 -d -r1.11 -r1.12
+*** 03.tex	17 Jun 2005 18:57:21 -0000	1.11
+--- 03.tex	19 Jun 2005 13:03:39 -0000	1.12
+***************
+*** 1,6 ****
+  \chapter{Dise&#241;o de los componentes}
+  
+- %TODO: se&#241;alar qu&#233; m&#243;dulos encriptan/desencriptan datos
+- 
+  \textbf{\textit{En este cap&#237;tulo definimos las principales funcionalidades que
+  deben implementar cada uno de los componentes.}}
+--- 1,4 ----
+***************
+*** 10,23 ****
+  \section{\kplfs}
+  
+! Este m&#243;dulo implementa la interfaz del VFS, y las operaciones que permite las
+! hemos descrito en el cap&#237;tulo anterior en el apartado \ref{sect:plfsoperations}.
+  
+! Las operaciones que ofrece, adem&#225;s de las del VFS, son:
+  
+  \begin{description}
+! 	\item[\texttt{invalidate (slice\_name, type, path)}] :\\
+  		Invalida el fichero determinado por \texttt{path} del slice
+! 		\texttt{slice\_name} del tipo \texttt{type} (\textit{shared} o
+! 		\textit{unshared}).
+  \end{description}
+  
+--- 8,26 ----
+  \section{\kplfs}
+  
+! Este m&#243;dulo implementa la interfaz del VFS (\textit{Virtual File System}, ver
+! \cite{libfs, lk, lk24i, lkapi, lkmpg, ovfs, tlk}) de Linux, y las operaciones
+! que permite las hemos descrito en el cap&#237;tulo anterior en el apartado
+! \ref{sect:plfsoperations}, emulando el comportamiento de sistemas de ficheros
+! como Intermezzo \cite{Intermezzo}, CODA o NFS, que tienen un controlador en el
+! n&#250;cleo y otro en espacio de usuario.
+  
+! Las operaciones que ofrece, adem&#225;s de las del VFS (informar a \kplfs del
+! resultado de las operaciones del VFS que se comunican a \plfs), son:
+  
+  \begin{description}
+! 	\item[\texttt{invalidate (slice\_name, node\_name, type, path)}] :\\
+  		Invalida el fichero determinado por \texttt{path} del slice
+! 		\texttt{slice\_name} del nodo \texttt{node\_name} del tipo
+! 		\texttt{type} (\textit{shared} o \textit{unshared}).
+  \end{description}
+  
+***************
+*** 40,49 ****
+  
+  \begin{description}
+! 	\item[\texttt{execute (component, operation, \ldots)}] :\\
+  		Llama a la funci&#243;n \texttt{operation} del componente
+  		\texttt{component} con los par&#225;metros extra que se indiquen (en caso
+! 		de indicar alguno).
+  		\\
+  		Los posibles componentes actualmente son \dpld o \pldb.
+  \end{description}
+  
+--- 43,60 ----
+  
+  \begin{description}
+! 	\item[\texttt{execute (component, id, operation, \ldots)}] :\\
+  		Llama a la funci&#243;n \texttt{operation} del componente
+  		\texttt{component} con los par&#225;metros extra que se indiquen (en caso
+! 		de indicar alguno), siendo \texttt{id} el identificador de la
+! 		operaci&#243;n para su posible retorno (en Linux sirve perfectamente
+! 		el PID del proceso que inicia la petici&#243;n, ya que en todo
+! 		momento habr&#225; una sola petici&#243;n por cada thread).
+  		\\
+  		Los posibles componentes actualmente son \dpld o \pldb.
++ 
++ 	\item[\texttt{invalidate (slice\_name, node\_name, type, path)}] :\\
++ 		Invalida el fichero determinado por \texttt{path} del slice
++ 		\texttt{slice\_name} del nodo \texttt{node\_name} del tipo
++ 		\texttt{type} (\textit{shared} o \textit{unshared}).
+  \end{description}
+  
+***************
+*** 55,60 ****
+  
+  \begin{description}
+! 	\item[\texttt{deployToSlice (slice\_name, path\_from, path\_to)}]
+! 		:\\
+  		Realiza la comunicaci&#243;n con los componentes \dplc para desplegar
+  		un fichero \textit{shared} (\texttt{path\_from}) al slice
+--- 66,70 ----
+  
+  \begin{description}
+! 	\item[\texttt{deployToSlice (slice\_name, path\_from, path\_to)}] :\\
+  		Realiza la comunicaci&#243;n con los componentes \dplc para desplegar
+  		un fichero \textit{shared} (\texttt{path\_from}) al slice
+***************
+*** 121,130 ****
+  
+  	\item[\texttt{registerNeeded (slice\_name, node\_name)}] :\\
+! 		Petici&#243;n de necesidad de registro.
+! 	
+  	\item[\texttt{addNodeToSlice (slice\_name, node\_name)}] :\\
+  		Informa de la adici&#243;n de un nodo a un slice.
+  
+! 	\item[\texttt{removeNodeToSlice (slice\_name, node\_name)}] :\\
+  		Informa de la eliminaci&#243;n de un nodo a un slice.
+  
+--- 131,141 ----
+  
+  	\item[\texttt{registerNeeded (slice\_name, node\_name)}] :\\
+! 		Petici&#243;n de necesidad de registro. Si \texttt{node\_name} es
+! 		nulo, se hace un registro a todo el slice \texttt{slice\_name}.
+! 
+  	\item[\texttt{addNodeToSlice (slice\_name, node\_name)}] :\\
+  		Informa de la adici&#243;n de un nodo a un slice.
+  
+! 	\item[\texttt{removeNodeFromSlice (slice\_name, node\_name)}] :\\
+  		Informa de la eliminaci&#243;n de un nodo a un slice.
+  
+***************
+*** 136,140 ****
+  En todas las anteriores operaciones, excepto las cuatro &#250;ltimas, se puede dar el
+  caso de que el/los \dplc destinatarios de las operaciones no hayan pasado por
+! un proceso de registro desde el \dpld or&#237;gen, por lo que se puede recibir un
+  aviso de necesidad de registro, al cual reaccionar&#225; con un registro
+  (\textit{unicast} o \textit{multicast} seg&#250;n el n&#250;mero de destinatarios de la
+--- 147,151 ----
+  En todas las anteriores operaciones, excepto las cuatro &#250;ltimas, se puede dar el
+  caso de que el/los \dplc destinatarios de las operaciones no hayan pasado por
+! un proceso de registro desde el \dpld origen, por lo que se puede recibir un
+  aviso de necesidad de registro, al cual reaccionar&#225; con un registro
+  (\textit{unicast} o \textit{multicast} seg&#250;n el n&#250;mero de destinatarios de la
+***************
+*** 169,175 ****
+  		Permite obtener el numero de nodos que hay en un slice
+  
+- 	\item[\texttt{getNodeSlices (node\_name)}] :\\
+- 		Permite obtener la lista de los slices de un nodo
+- 
+  	\item[\texttt{getSliceNode (slice\_name, node\_name)}] :\\
+  		Permite obtener informaci&#243;n de un nodo de un slice
+--- 180,183 ----
+***************
+*** 182,185 ****
+--- 190,196 ----
+  		(aprovech&#225;ndose, si se da el caso, de un sistema DNS con
+  		soporte para ``localidad'').
++ 
++ 	\item[\texttt{getNodeSlices (node\_name)}] :\\
++ 		Permite obtener la lista de los slices de un nodo
+  \end{description}
+  
+***************
+*** 222,229 ****
+  		implementaci&#243;n concreta del software multicast que usemos.
+  
+! 	\item[\texttt{setOptions (group\_id, options[])}] :\\
+  		Permite obtener las posibles opciones que permita la
+  		implementaci&#243;n concreta del software multicast que usemos.
+! 	
+  	\item[\texttt{sendData (group\_id, data)}] :\\
+  		Permite enviar datos a un grupo.
+--- 233,240 ----
+  		implementaci&#243;n concreta del software multicast que usemos.
+  
+! 	\item[\texttt{getOptions (group\_id, options[])}] :\\
+  		Permite obtener las posibles opciones que permita la
+  		implementaci&#243;n concreta del software multicast que usemos.
+! 
+  	\item[\texttt{sendData (group\_id, data)}] :\\
+  		Permite enviar datos a un grupo.
+***************
+*** 257,260 ****
+--- 268,273 ----
+  \section{\umcr}
+  
++ \nocite{RON}
++ 
+  Estos nodos se encargan de hacer la transmisi&#243;n multicast, con tal de hacer
+  llegar los datos a los \umcc del grupo de destino.
+***************
+*** 268,275 ****
+  
+  En cuanto a las implementaciones, hemos encontrado varias \cite{Araneola, ESM,
+! LMDD, LSAM}, pero consideramos que Araneola \cite{Araneola} se ajusta m&#225;s a
+! nuestras necesidades que las otras implementaciones por el hecho de haber sido
+! dise&#241;ada para entornos din&#225;micos y con la fiabilidad en mente, adem&#225;s de ser un
+! sistema de comunicaci&#243;n de M a N.
+  
+  
+--- 281,288 ----
+  
+  En cuanto a las implementaciones, hemos encontrado varias \cite{Araneola, ESM,
+! LMDD, LSAM, nemo, nemo-res-p2p-mcast, stealth}, pero consideramos que Araneola
+! \cite{Araneola} se ajusta m&#225;s a nuestras necesidades que las otras
+! implementaciones por el hecho de haber sido dise&#241;ada para entornos din&#225;micos y
+! con la fiabilidad en mente, adem&#225;s de ser un sistema de comunicaci&#243;n de M a N.
+  
+  
+***************
+*** 282,290 ****
+  consideraremos administrado correctamente (por lo que no habr&#225; configuraciones
+  ni modificaciones maliciosas) y al recibir los datos de \umcc acceder&#225; a s&#237;
+! mismo por ssh con tal de poner los ficheros al slice destino y seguidamente
+  ejecutar el shell script asociado, en caso de estar presente.
+  
+! Para realizar esta conexi&#243;n por ssh, el nodo del slice \dplc necesita los datos
+! de clave y password ssh para que \dplc pueda hacer una conexi&#243;n a la propia
+  m&#225;quina y acceder a la m&#225;quina virtual asociada al slice de destino.
+  
+--- 295,303 ----
+  consideraremos administrado correctamente (por lo que no habr&#225; configuraciones
+  ni modificaciones maliciosas) y al recibir los datos de \umcc acceder&#225; a s&#237;
+! mismo por SSH con tal de poner los ficheros al slice destino y seguidamente
+  ejecutar el shell script asociado, en caso de estar presente.
+  
+! Para realizar esta conexi&#243;n por SSH, el nodo del slice \dplc necesita los datos
+! de clave y password SSH para que \dplc pueda hacer una conexi&#243;n a la propia
+  m&#225;quina y acceder a la m&#225;quina virtual asociada al slice de destino.
+  
+***************
+*** 318,322 ****
+  		Hace una petici&#243;n de un objeto del sistema de ficheros
+  		del slice \texttt{slice\_name}.
+! 	
+  	\item[\texttt{deleteFile (slice\_name, path, new\_version)}] :\\
+  		Hace la petici&#243;n de eliminaci&#243;n de un objeto del sistema de
+--- 331,335 ----
+  		Hace una petici&#243;n de un objeto del sistema de ficheros
+  		del slice \texttt{slice\_name}.
+! 
+  	\item[\texttt{deleteFile (slice\_name, path, new\_version)}] :\\
+  		Hace la petici&#243;n de eliminaci&#243;n de un objeto del sistema de
+***************
+*** 330,336 ****
+  		\texttt{slice\_name}.
+  
+! 	\item[\texttt{getKey (slice\_name, $K_{pub_{d}}$)}] :\\
+! 		Informa de la clave p&#250;blica remota y devuelve la propia clave
+! 		p&#250;blica.
+  
+  	\item[\texttt{getSSH (slice\_name)}] :\\
+--- 343,349 ----
+  		\texttt{slice\_name}.
+  
+! 	\item[\texttt{getKey ($K_{pub}$)}] :\\
+! 		Informa de la propia clave p&#250;blica y devuelve la clave
+! 		p&#250;blica remota.
+  
+  	\item[\texttt{getSSH (slice\_name)}] :\\
+***************
+*** 346,362 ****
+  
+  	\item[\texttt{needDeploy (slice\_name, node\_name, path)}] :\\
+! 		Informa de la necesidad de \texttt{node\_name} de recibir un
+  		deploy de \texttt{path} del slice \texttt{slice\_name}.
+  
+! 	\item[\texttt{registerWithResponse (slice\_name, node\_name, $K_{SSH}$,
+! 		$P_{SSH}$, $K_{pub}$)}] :\\
+! 		Permite a \texttt{node\_name} registrarse en \dplc como
+! 		integrante del slice y devuelve un resultado para informar si
+! 		se ha podido realizar la conexi&#243;n SSH.
+! 
+! 	\item[\texttt{register (slice\_name, node\_name, $K_{SSH}$, $P_{SSH}$,
+  		$K_{pub}$)}] :\\
+  		Permite a \texttt{node\_name} registrarse en \dplc como
+! 		integrante del slice.
+  
+  	\item[\texttt{joined (slice\_name)}] :\\
+--- 359,375 ----
+  
+  	\item[\texttt{needDeploy (slice\_name, node\_name, path)}] :\\
+! 		Informa de la necesidad a \texttt{node\_name} de recibir un
+  		deploy de \texttt{path} del slice \texttt{slice\_name}.
+  
+! 	\item[\texttt{registerWithResponse (slice\_name, $K_{SSH}$, $P_{SSH}$,
+  		$K_{pub}$)}] :\\
++ 		Permite registrarse en un \dplc como integrante del slice emisor
++ 		y devuelve un resultado para informar si se ha podido realizar
++ 		la conexi&#243;n SSH.
++ 
++ 	\item[\texttt{register (slice\_name, $K_{SSH}$, $P_{SSH}$, $K_{pub}$)}]
++ 		:\\
+  		Permite a \texttt{node\_name} registrarse en \dplc como
+! 		integrante del slice emisor para realizar la conexi&#243;n SSH.
+  
+  	\item[\texttt{joined (slice\_name)}] :\\
+***************
+*** 393,397 ****
+  
+  Para ello debe haber una instancia corriendo en cada m&#225;quina virtual que
+! corresponda a un slice que funciona a traves de \plfs, siendo arrancado por el
+  correspondiente \dplc en el momento en que hay alg&#250;n \dpld registrado.
+  
+--- 406,410 ----
+  
+  Para ello debe haber una instancia corriendo en cada m&#225;quina virtual que
+! corresponda a un slice que funciona a trav&#233;s de \plfs, siendo arrancado por el
+  correspondiente \dplc en el momento en que hay alg&#250;n \dpld registrado.
+  
+
+Index: 04.tex
+===================================================================
+RCS file: /cvsroot/plfs/doc/04.tex,v
+retrieving revision 1.7
+retrieving revision 1.8
+diff -C2 -d -r1.7 -r1.8
+*** 04.tex	17 Jun 2005 18:57:21 -0000	1.7
+--- 04.tex	19 Jun 2005 13:03:39 -0000	1.8
+***************
+*** 1,10 ****
+  \chapter{Comunicaci&#243;n entre los componentes}
+  
+- %TODO: se&#241;alar qu&#233; comunicaciones van encriptadas/desencriptadas
+- 
+  \textbf{\textit{En este cap&#237;tulo comentamos diferentes implementaciones de la
+  comunicaci&#243;n entre componentes del sistema. Como veremos, nos centraremos en
+  los tipos de mensajes en cada tipo de comunicaci&#243;n y la seguridad que debemos
+  implementar en cada una, para asegurar autenticidad y confidencialidad.}}
+  
+  Las comunicaciones entre componentes de un mismo nodo funcionan a modo de
+--- 1,9 ----
+  \chapter{Comunicaci&#243;n entre los componentes}
+  
+  \textbf{\textit{En este cap&#237;tulo comentamos diferentes implementaciones de la
+  comunicaci&#243;n entre componentes del sistema. Como veremos, nos centraremos en
+  los tipos de mensajes en cada tipo de comunicaci&#243;n y la seguridad que debemos
+  implementar en cada una, para asegurar autenticidad y confidencialidad.}}
++ \\
+  
+  Las comunicaciones entre componentes de un mismo nodo funcionan a modo de
+***************
+*** 37,49 ****
+  \begin{description}
+  	\item [Dispositivo:]
+! 		Aprovecha las propias caracter&#237;sticas de un dispositivo de sistema,
+! 		ya que permite hacer esperas no activas (es decir bloqueantes), a
+! 		trav&#233;s de \textit{poll}, \textit{read}, \textit{select} de un
+! 		dispositivo que implementa \kplfs.
+  
+  	\item [Compartici&#243;n de memoria:]
+! 		El problema de esta soluci&#243;n es que requiere una espera activa por
+! 		parte de \uplfs, que debe ir comprobando la zona de memoria compartida
+! 		para ver si hay alg&#250;n nuevo evento procedente de \kplfs.
+  \end{description}
+  
+--- 36,49 ----
+  \begin{description}
+  	\item [Dispositivo:]
+! 		Aprovecha las propias caracter&#237;sticas de un dispositivo de
+! 		sistema, ya que permite hacer esperas no activas (es decir
+! 		bloqueantes), a trav&#233;s de \textit{poll}, \textit{read},
+! 		\textit{select} de un dispositivo que implementa \kplfs.
+  
+  	\item [Compartici&#243;n de memoria:]
+! 		El problema de esta soluci&#243;n es que requiere una espera activa
+! 		por parte de \uplfs, que debe ir comprobando la zona de memoria
+! 		compartida para ver si hay alg&#250;n nuevo evento procedente de
+! 		\kplfs.
+  \end{description}
+  
+***************
+*** 55,59 ****
+  deber&#225; informar dichos eventos al m&#243;dulo a nivel usuario \uplfs (el cual deber&#225;
+  realizar las operaciones pertinentes, comunic&#225;ndose con los diferentes
+! componentes disponibles).
+  
+  En &#233;ste caso, aunque los componentes est&#233;n en el mismo nodo, deben enviarse
+--- 55,60 ----
+  deber&#225; informar dichos eventos al m&#243;dulo a nivel usuario \uplfs (el cual deber&#225;
+  realizar las operaciones pertinentes, comunic&#225;ndose con los diferentes
+! componentes disponibles y respondiendo a cada operaci&#243;n con su identificador
+! \texttt{id}).
+  
+  En &#233;ste caso, aunque los componentes est&#233;n en el mismo nodo, deben enviarse
+***************
+*** 61,70 ****
+  formato que se ha comentado al inicio del cap&#237;tulo, pero sin el par&#225;metro de
+  \texttt{Remitente}.
+  
+  
+  
+! \section{\uplfs/\dpld $\rightarrow$ \pldb}
+  
+  Llamada interna de funciones.
+  
+  
+--- 62,101 ----
+  formato que se ha comentado al inicio del cap&#237;tulo, pero sin el par&#225;metro de
+  \texttt{Remitente}.
++ \\
+  
++ \kplfs $\rightarrow$ \uplfs:
+  
++ \begin{itemize}
++ 	\item \texttt{execute (component, id, operation, \ldots)}
++ \end{itemize}
+  
+! \kplfs $\leftarrow$ \uplfs:
+! 
+! \begin{itemize}
+! 	\item Operaciones para el retorno del resultado de las peticiones del
+! 		VFS a \uplfs (ver \cite{lkapi}).
+! 	\item \texttt{invalidate (slice\_name, node\_name, type, path)}
+! \end{itemize}
+! 
+! 
+! 
+! \section{\uplfs/\dpld/\dplc $\rightarrow$ \pldb}
+  
+  Llamada interna de funciones.
++ \\
++ 
++ \uplfs/\dpld/\dplc $\rightarrow$ \pldb:
++ 
++ \begin{itemize}
++ 	\item \texttt{getSlices ()}
++ 	\item \texttt{getNodes ()}
++ 	\item \texttt{getSliceNodes (slice\_name)}
++ 	\item \texttt{getSliceNodesAny (slice\_name, num)}
++ 	\item \texttt{getSliceNodesNumber (slice\_name)}
++ 	\item \texttt{getSliceNode (slice\_name, node\_name)}
++ 	\item \texttt{getSliceNodeAny (slice\_name)}
++ 	\item \texttt{getSliceNodeNearest (slice\_name)}
++ 	\item \texttt{getNodeSlices (node\_name)}
++ \end{itemize}
+  
+  
+***************
+*** 73,103 ****
+  
+  Llamada interna de funciones.
+  
+  
+  
+! \section{\dpld $\rightarrow$ \dplc}
+! 
+! Todas las comunicaciones van cifradas con $K_{pub_{c}}$ (para asegurar que s&#243;lo
+! los \dplc puedan leer los contenidos) y firmadas con $K_{priv_{d}}$ (para poder
+! as&#237; comprovar su autenticidad).
+  
+! Luego, en el destino, se comprueba la firma, se descifran los datos y se
+! procede a realizar la operaci&#243;n.
+  
+  
+  
+! \section{\dplc $\rightarrow$ \dpld}
+  \label{sect:warnings}
+  
+! Todas las comunicaciones van cifradas con $K_{pub_{d}}$ (para asegurar que s&#243;lo
+! los \dplc puedan leer los contenidos) y firmadas con $K_{priv_{c}}$ (para poder
+! as&#237; comprovar su autenticidad).
+  
+  Luego, en el destino, se comprueba la firma, se descifran los datos y se
+! procede a realizar la operaci&#243;n.
+  
+  
+  
+! \section{\dpld/\dplc $\rightarrow$ \umcc}
+  
+  Cuando tanto \dpld como \dplc quieren comunicarse con un grupo (\dpld se
+--- 104,191 ----
+  
+  Llamada interna de funciones.
++ \\
+  
++ \uplfs $\rightarrow$ \dpld:
+  
++ \begin{itemize}
++ 	\item \texttt{deployToSlice (slice\_name, path\_from, path\_to)}
++ 	\item \texttt{deployToNode (slice\_name, node\_name, path\_from,
++ 		path\_to)}
++ 	\item \texttt{getInfoShared (slice\_name, path)}
++ 	\item \texttt{getInfoUnshared (slice\_name, node\_name, path)}
++ 	\item \texttt{getFileShared (slice\_name, path)}
++ 	\item \texttt{getFileUnshared (slice\_name, node\_name, path)}
++ 	\item \texttt{deleteFileShared (slice\_name, path)}
++ 	\item \texttt{deleteFileUnshared (slice\_name, node\_name, path)}
++ 	\item \texttt{getSliceNodeVersion (slice\_name, node\_name)}
++ 	\item \texttt{registerNeeded (slice\_name, node\_name)}
++ \end{itemize}
+  
+! \uplfs $\leftarrow$ \dpld:
+  
+! \begin{itemize}
+! 	\item \texttt{invalidate (slice\_name, node\_name, type, path)}
+! \end{itemize}
+  
+  
+  
+! \section{\dpld $\longleftrightarrow$ \dplc}
+  \label{sect:warnings}
+  
+! Teniendo en cuanta que cada componente tiene su propio par de llaves
+! (un par $K_{pub_{d}}$ y $K_{priv_{d}}$ para cada \dpld y un mismo par
+! $K_{pub_{c}}$ y $K_{priv_{c}}$ para todos los \dplc), todas las comunicaciones
+! van cifradas con la clave p&#250;blica del emisor (para asegurar que s&#243;lo
+! los receptores puedan leer los contenidos) y firmadas con la clave
+! privada del emisor (para poder as&#237; comprobar su autenticidad), excepto
+! \texttt{getKey}, que s&#243;lo va firmada.
+  
+  Luego, en el destino, se comprueba la firma, se descifran los datos y se
+! procede a realizar la operaci&#243;n pertinente.
+! \\
+! 
+! \dpld $\rightarrow$ \dplc:
+! 
+! \begin{itemize}
+! 	\item \texttt{deployToSlice (slice\_name, path\_to, file, type,
+! 		new\_version)}
+! 	\item \texttt{getInfo (slice\_name, path)}
+! 	\item \texttt{getFile (slice\_name, path)}
+! 	\item \texttt{deleteFile (slice\_name, path, new\_version)}
+! 	\item \texttt{getVersion (slice\_name)}
+! 	\item \texttt{getKey ($K_{pub_{d}}$)}
+! 	\item \texttt{registerWithResponse (slice\_name, $K_{SSH}$, $P_{SSH}$,
+! 		$K_{pub}$)}
+! 	\item \texttt{register (slice\_name, $K_{SSH}$, $P_{SSH}$, $K_{pub}$)}
+! \end{itemize}
+  
++ \dpld $\leftarrow$ \dplc:
+  
++ \begin{itemize}
++ 	\item \texttt{registerNeeded (slice\_name, node\_name)}
++ 	\item \texttt{invalidate (slice\_name, node\_name, type, path)}
++ \end{itemize}
+  
+! 
+! 
+! \section{\dplc $\rightarrow$ \dplc}
+! 
+! Como la red de \dplc intenta llegar sola a la coherencia de versiones, necesita
+! ofrecer m&#233;todos para ponerse en contacto e intercambiar datos, cifrando y
+! firmando con $K_{priv_{c}}$.
+! 
+! \begin{itemize}
+! 	\item \texttt{deployToSlice (slice\_name, path\_to, file, type,
+! 		new\_version)}
+! 	\item \texttt{needDeploy (slice\_name, node\_name, path)}
+! 	\item \texttt{ping (slice\_name, node\_name, version)}
+! 	\item \texttt{getSSH (slice\_name)}
+! \end{itemize}
+! 
+! 
+! 
+! \section{\dpld/\dplc $\longleftrightarrow$ \umcc}
+! 
+! Llamada interna de funciones.
+  
+  Cuando tanto \dpld como \dplc quieren comunicarse con un grupo (\dpld se
+***************
+*** 105,108 ****
+  \dplc se comunica con el grupo de emisores para mandarles avisos), lo hacen a
+  trav&#233;s de la red multicast, mediante el componente de entrada a ella que es
+! \umcc, de forma que mandan los datos como si fueran directamente una de las dos
+! comunicaciones anteriores y se transmiten transparentemente por la red \umc.
+--- 193,252 ----
+  \dplc se comunica con el grupo de emisores para mandarles avisos), lo hacen a
+  trav&#233;s de la red multicast, mediante el componente de entrada a ella que es
+! \umcc, de forma que mandan los datos como si fueran directamente como la
+! comunicaci&#243;n anterior y se transmiten transparentemente por la red \umc.
+! \\
+! 
+! \dpld/\dplc $\rightarrow$ \umcc:
+! 
+! \begin{itemize}
+! 	\item \texttt{group\_id getGroup (group\_name)}
+! 	\item \texttt{setOptions (group\_id, options[])}
+! 	\item \texttt{getOptions (group\_id, options[])}
+! 	\item \texttt{sendData (group\_id, data)}
+! 	\item \texttt{recieveData (group\_id, data)}
+! 	\item \texttt{joinSender (group\_id, node\_name)}
+! 	\item \texttt{deleteSender (group\_id, node\_name)}
+! 	\item \texttt{joinReceiver (group\_id, node\_name)}
+! 	\item \texttt{deleteReceiver (group\_id, node\_name)}
+! \end{itemize}
+! 
+! Con tal de saber \dpld cu&#225;l es el estado de los slices, como la red multicast
+! subyacente puede informar de la adici&#243;n y eliminaci&#243;n de receptores, es el
+! propio \umcc quien se encarga de avisar a \dpld (en lugar de \dplc, evitando as&#237;
+! ocupar la red innecesariamente).
+! \\
+! 
+! \dpld $\leftarrow$ \umcc:
+! 
+! \begin{itemize}
+! 	\item \texttt{addNodeToSlice (slice\_name, node\_name)}
+! 	\item \texttt{removeNodeFromSlice (slice\_name, node\_name)}
+! \end{itemize}
+! 
+! \dplc $\leftarrow$ \umcc son:
+! 
+! \begin{itemize}
+! 	\item \texttt{joined (slice\_name)}
+! 	\item \texttt{deleted (slice\_name)}
+! \end{itemize}
+! 
+! 
+! 
+! \section{\dplc $\longleftrightarrow$ \famon}
+! 
+! Llamada interna de funciones.
+! \\
+! 
+! \dplc $\rightarrow$ \famon:
+! 
+! \begin{itemize}
+! 	\item \texttt{watch (path)}
+! 	\item \texttt{unwatch (path)}
+! 	\item \texttt{stop ()}
+! \end{itemize}
+! 
+! \dplc $\leftarrow$ \famon:
+! 
+! \begin{itemize}
+! 	\item \texttt{invalidate (slice\_name, path)}
+! \end{itemize}
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000015.html">[Plfs-svn] doc ToDo.txt,1.3,NONE misc.txt,1.1,NONE
+</A></li>
+	<LI>Next message: <A HREF="000017.html">[Plfs-svn] doc 02.tex,1.12,1.13 03.tex,1.12,1.13
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#16">[ date ]</a>
+              <a href="thread.html#16">[ thread ]</a>
+              <a href="subject.html#16">[ subject ]</a>
+              <a href="author.html#16">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/plfs-svn">More information about the Plfs-svn
+mailing list</a><br>
+</body></html>
